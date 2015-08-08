@@ -1,0 +1,86 @@
+@import url(reset.css);
+
+body {
+	font: 12px Arial, Verdana, Tahoma, sans-serif;
+}
+
+.header {	
+	height: 100px;
+	border: 1px solid #000;
+}
+
+.logo {
+	width: 178px;
+	height: 54px;
+	margin: 23px 0 0 20px;
+	float: left;
+}
+
+.sidebar {
+	width: 280px;
+	height: 700px;
+	border: 1px solid #000;
+	text-align: center;
+	float: left;
+}
+
+.content {
+	margin-left: 280px;
+	text-align: center;
+}
+
+.login {
+	float: right;
+	margin: 20px 20px 0 0;
+}
+
+.login a{
+	text-decoration: none;
+}
+
+form {
+	padding: 40px 20px  20px  20px;
+	background-color: #fff;
+	max-width: 220px;
+	margin: auto;
+	position: relative;
+}
+
+form input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+form button{
+	margin-left: 80px;
+}
+
+.good-box {
+	width: 200px;
+	height: 270px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 10px 0 0 20px;
+}
+
+.good-box a {
+	text-decoration: none;
+	color: #000;
+}
+
+.good-box a:hover {
+	text-decoration: underline;
+	color: #0f84cb;
+}
+
+.good-box p {
+	font-weight: bold;
+	
+}
+
+.good-box img {
+	margin: 10px auto;
+}
+
+.hidden {
+	display: none;
+}
