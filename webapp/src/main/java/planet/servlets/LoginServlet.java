@@ -1,6 +1,5 @@
 package planet.servlets;
 
-import sun.net.httpserver.HttpServerImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +10,9 @@ import java.io.IOException;
 /**
  * Created by randriyanov on 09.08.15.
  */
-public class LoginServlet{
-
-
+public class LoginServlet extends HttpServlet{
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
+    }
 }
