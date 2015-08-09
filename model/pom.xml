@@ -11,5 +11,14 @@
 
     <artifactId>model</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>3.3.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>
