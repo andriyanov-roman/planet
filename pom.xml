@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>web</module>
         <module>database</module>
         <module>model</module>
+        <module>webapp</module>
     </modules>
 
 
