@@ -18,6 +18,11 @@
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+            <dependency>
+                <groupId>proff_2</groupId>
+                <artifactId>database</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
     </dependencies>
 
     <build>
