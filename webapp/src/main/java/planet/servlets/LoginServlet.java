@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import planet.services.UserValidatorService;
-
+import planet.services.interfaces.ProfileService;
+import profile.Profile;
 
 @WebServlet(urlPatterns = "/login", name = "LoginServlet")
 public class LoginServlet extends HttpServlet {
