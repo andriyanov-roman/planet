@@ -6,7 +6,7 @@ import planet.services.interfaces.ProfileService;
 public class Profile implements ProfileService {
     private String login;
 
-    private String[] suggestedGoods;
+    private String[] suggestedGoods = new String[3];
 
     @Override
     public Profile getUserProfile(String login)
