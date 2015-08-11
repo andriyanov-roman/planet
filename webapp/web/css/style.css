@@ -38,23 +38,6 @@ body {
 	text-decoration: none;
 }
 
-form {
-	padding: 40px 20px  20px  20px;
-	background-color: #fff;
-	max-width: 220px;
-	margin: auto;
-	position: relative;
-}
-
-form input {
-	width: 100%;
-	margin-bottom: 10px;
-}
-
-form button{
-	margin-left: 80px;
-}
-
 .good-box {
 	width: 200px;
 	height: 270px;
@@ -81,6 +64,94 @@ form button{
 	margin: 10px auto;
 }
 
-.hidden {
+.hidden-login {
 	display: none;
 }
+
+.hidden-registration {
+	display: none;
+}
+
+form {
+	padding: 40px 20px  15px  20px;
+	background-color: #fff;
+	border: 2px solid #0f84cb;
+	border-radius: 10px;
+	max-width: 225px;
+	margin: auto;
+	position: relative;
+}
+
+form span {
+	font-weight: bold;
+}
+
+form input {
+	padding: 5px 5px;
+	margin: 5px 0 10px 0;
+	border: 1px solid #0f84cb;
+	border-radius: 5px;
+	width: 213px;
+}
+
+form a {
+	color: #000;
+	text-decoration: none;
+}
+
+form a:hover {
+	color: #0f84cb;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+form #reg {
+	float: right;
+}
+
+.log-reg-buttons {
+	height: 25px;
+	border: 1px solid #0d679d;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #0f84cb;
+}
+
+.log-reg-buttons:hover {
+	color: #fffc00;
+	cursor: pointer;
+}
+
+#login-btn {
+	width: 70px;
+	margin: 10px 0 0 77px;
+}
+
+.user-agreement {
+	position: relative;
+	margin-bottom: 10px;
+	max-width: 225px;
+	height: 15px;
+}
+
+.user-agreement span {
+	margin-left: 20px;
+}
+
+.user-agreement a {
+	color: #0f84cb;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+form input[type="checkbox"] {
+	position: absolute;
+	width: 15px;
+	margin: auto;
+}
+
+#reg-btn {
+	width: 150px;
+	margin: 15px 0 0 37px;
+}
+
