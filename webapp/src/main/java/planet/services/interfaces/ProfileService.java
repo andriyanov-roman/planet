@@ -5,5 +5,5 @@ import profile.Profile;
  * Created by sigen on 8/11/2015.
  */
 public interface ProfileService {
-    Profile getUserProfile(String login);
+    profile.Profile getUserProfile(String login);
 }
