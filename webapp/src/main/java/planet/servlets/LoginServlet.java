@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
         UserValidatorService validator = new UserValidatorService();
         String login = req.getParameter("name");
         String pass = req.getParameter("password");
-//        boolean valid = validator.isUserValid(login, pass);
+        boolean valid = validator.isUserValid(login, pass);
         if(true){
             Profile profile = new Profile().getUserProfile(login);
             Cookie cookie = new Cookie("uname",login);
