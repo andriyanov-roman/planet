@@ -51,21 +51,6 @@
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <directory>web.css</directory>
-            </resource>
-            <resource>
-                <directory>web.html</directory>
-            </resource>
-            <resource>
-                <directory>web.img</directory>
-            </resource>
-            <resource>
-                <directory>web.js</directory>
-            </resource>
-
-        </resources>
         <finalName>planet</finalName>
         <plugins>
             <plugin>
