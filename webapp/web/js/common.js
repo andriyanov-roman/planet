@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-	$(".popup").magnificPopup();
+	$(".login-popup").magnificPopup();
+	$(".reg-popup").magnificPopup();
 
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
