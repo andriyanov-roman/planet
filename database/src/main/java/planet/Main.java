@@ -7,8 +7,8 @@ import planet.entity.User;
 /**
  * Created by oleksii on 09.08.15.
  */
-public class MainTest {
-    public void main(){
+public class Main {
+    public static void main(String[] args){
         CrudGeneralDao dao = new UserDaoImpl();
         User u = new User("root");
         u.setPassword("123");

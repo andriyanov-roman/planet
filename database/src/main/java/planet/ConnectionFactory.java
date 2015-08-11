@@ -8,10 +8,9 @@ public class ConnectionFactory {
 
     private static ConnectionFactory instance;
     private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String DB_URL = "jdbc:mysql://db4free.net/planet";
+    private static String DB_URL = "jdbc:mysql://db4free.net:3306/planet";
     private static String USER = "planet";
     private static String PASS = "planet234";
-
 
     public void registerDriver() {
         try {
@@ -26,7 +25,7 @@ public class ConnectionFactory {
         try {
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
         } catch (SQLException e) {
-            System.out.println("ERROR: Unable to Connect to Database.");
+            System.out.println(e.getMessage());
         }
         return connection;
     }
