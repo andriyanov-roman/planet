@@ -12,6 +12,7 @@
         <module>database</module>
         <module>model</module>
         <module>webapp</module>
+        <module>webexamples</module>
     </modules>
     <build>
         <plugins>
