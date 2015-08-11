@@ -12,6 +12,7 @@
     <packaging>war</packaging>
     <artifactId>webapp</artifactId>
     <dependencies>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -21,6 +22,11 @@
         <dependency>
             <groupId>proff_2</groupId>
             <artifactId>database</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>proff_2</groupId>
+            <artifactId>model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -39,6 +45,21 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>web.css</directory>
+            </resource>
+            <resource>
+                <directory>web.html</directory>
+            </resource>
+            <resource>
+                <directory>web.img</directory>
+            </resource>
+            <resource>
+                <directory>web.js</directory>
+            </resource>
+
+        </resources>
         <finalName>planet</finalName>
         <plugins>
             <plugin>
@@ -54,8 +75,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
