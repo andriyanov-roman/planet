@@ -1,6 +1,6 @@
 package planet.servlets;
 
-
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 import planet.services.UserValidatorService;
-import planet.services.interfaces.ProfileService;
 import profile.Profile;
 
 @WebServlet(urlPatterns = "/login", name = "LoginServlet")
@@ -22,9 +20,11 @@ public class LoginServlet extends HttpServlet {
         String pass = req.getParameter("password");
         //boolean valid = validator.isUserValid(login, pass);
         if(true){
+            Profile profile = new Profile().getUserProfile(login);
+            req.setAttribute("profile",profile);
             Cookie cookie = new Cookie("uname",login);
             resp.addCookie(cookie);
-            resp.sendRedirect("jsp/ok.jsp");
+            req.getRequestDispatcher("jsp/ok.jsp").forward(req, resp);
         } else {
             resp.sendRedirect("jsp/notOk.jsp");
         }
