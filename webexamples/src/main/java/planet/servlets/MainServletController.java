@@ -41,7 +41,7 @@ public class MainServletController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("first_name");
+        String name =  req.getParameter("first_name");
         User user = new User();
         user.setName(name);
         req.setAttribute("user", user);
