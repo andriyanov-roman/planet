@@ -2,7 +2,6 @@ package planet.dao;
 
 import planet.ConnectionFactory;
 import planet.dao.interfaces_dao.CrudGeneralDao;
-import planet.entity.Hist;
 import planet.entity.Order;
 import planet.entity.SuperEntity;
 
@@ -81,7 +80,7 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "INSERT INTO order(user_id, product_id, product_qty, order_date) VALUES (?,?,?,?)";
+                String sqlGood = "INSERT INTO order(user_id, product_id, product_qty, amount, order_date) VALUES (?,?,?,?,?)";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 Date date = new Date();
@@ -91,7 +90,8 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
                 statement.setInt(1, order.getUserId());
                 statement.setInt(2, order.getProductId());
                 statement.setInt(3, order.getProductQty());
-                statement.setTimestamp(4, order.getOrderDate());
+                statement.setDouble(4, order.getAmount());
+                statement.setTimestamp(5, order.getOrderDate());
 
                 statement.addBatch();
 

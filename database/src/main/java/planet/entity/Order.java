@@ -9,6 +9,7 @@ public class Order extends SuperEntity{
     private int userId;
     private int productId;
     private int productQty;
+    private double amount;
     private Timestamp orderDate;
 
     public int getUserId() {
@@ -41,5 +42,13 @@ public class Order extends SuperEntity{
 
     public void setOrderDate(Timestamp orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }
