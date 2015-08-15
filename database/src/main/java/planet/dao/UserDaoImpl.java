@@ -100,6 +100,7 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
     @Override
     public User select(String login) {
         User user = new User();
+
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {

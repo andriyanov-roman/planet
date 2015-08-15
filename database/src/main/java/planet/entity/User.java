@@ -6,7 +6,7 @@ package planet.entity;
 public class User extends SuperEntity{
     private String login;
     private String password;
-    private Integer roleId;
+    private int roleId;
 
     public User(String login) {
         this.login = login;
@@ -30,7 +30,7 @@ public class User extends SuperEntity{
         this.password = password;
     }
 
-    public Integer getRoleId() {
+    public int getRoleId() {
         return roleId;
     }
 
