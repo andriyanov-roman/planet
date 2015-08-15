@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ubn-rok on 11.08.15.
@@ -41,10 +43,13 @@ public class MainServletController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name =  req.getParameter("first_name");
+        String name = req.getParameter("first_name");
+        Map<String, String> map = new HashMap<>();
+        map.put("Key", "value");
         User user = new User();
         user.setName(name);
         req.setAttribute("user", user);
+        req.setAttribute("map", map);
         RequestDispatcher view = req.getRequestDispatcher("jsp/result.jsp");
         view.forward(req, resp);
     }
