@@ -1,8 +1,7 @@
 package planet.dao;
-
 import planet.ConnectionFactory;
 import planet.dao.interfaces_dao.CrudGeneralDao;
-import planet.entity.User;
+import planet.entity.UserRole;
 import planet.entity.SuperEntity;
 
 import java.sql.Connection;
@@ -11,20 +10,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by oleksii on 09.08.2015.
+ * Created by okova on 8/15/2015.
  */
-public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, User> {
+public class UserRoleDaoImpl extends SuperEntity implements CrudGeneralDao<String, UserRole> {
     @Override
-    public void delete(User user) {
+    public void delete(UserRole userRole) {
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "DELETE FROM user WHERE login = ?";
+                String sqlGood = "DELETE FROM user_role WHERE code = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
-                statement.setString(1, user.getLogin());
+                statement.setString(1, userRole.getCode());
 
                 statement.addBatch();
 
@@ -42,17 +41,17 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
     }
 
     @Override
-    public void update(User user) {
+    public void update(UserRole userRole) {
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "UPDATE user SET password = ? WHERE login = ?";
+                String sqlGood = "UPDATE user_role SET name = ? WHERE code = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
-                statement.setString(1, user.getPassword());
-                statement.setString(2,user.getLogin());
+                statement.setString(1,userRole.getName());
+                statement.setString(2, userRole.getCode());
 
                 statement.addBatch();
 
@@ -70,18 +69,17 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
     }
 
     @Override
-    public void insert(User user) {
+    public void insert(UserRole userRole) {
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "INSERT INTO user(login, password, role_id) VALUES (?,?,?)";
+                String sqlGood = "INSERT INTO user_role(code, name) VALUES (?,?)";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
-                statement.setString(1, user.getLogin());
-                statement.setString(2, user.getPassword());
-                statement.setInt(3, user.getRoleId());
+                statement.setString(1, userRole.getCode());
+                statement.setString(2, userRole.getName());
                 statement.addBatch();
 
                 statement.executeBatch();
@@ -98,21 +96,21 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
     }
 
     @Override
-    public User select(String login) {
-        User user = new User();
+    public UserRole select(String code) {
+        UserRole userRole = new UserRole();
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
-                String sqlGood = "SELECT * FROM user WHERE login = ?";
+                String sqlGood = "SELECT * FROM user_role WHERE code = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
-                statement.setString(1, login);
+                statement.setString(1, code);
 
                 ResultSet rs= statement.executeQuery();
 
-                user.setLogin(rs.getString("user"));
-                user.setPassword(rs.getString("password"));
-                user.setId(rs.getInt("id"));
+                userRole.setCode(rs.getString("code"));
+                userRole.setName(rs.getString("name"));
+                userRole.setId(rs.getInt("id"));
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -120,7 +118,7 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return user;
+        return userRole;
     }
 
 }
