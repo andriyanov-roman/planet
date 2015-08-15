@@ -1,0 +1,107 @@
+.content {
+	width: 1010px;
+	height: 540px;
+	margin: 20px auto;
+	border: 2px solid #9a9a9a;
+	background: #F4F4F4;
+	background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#EEEEEE));
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.left-sidebar {
+	width: 173px;
+	height: 530px;
+	float: left;
+	border-right: 1px solid #9a9a9a;
+	padding-top: 10px;
+}
+
+.pers_cabinet_btn {
+	width: 150px;
+	height: 30px;
+	margin: 0px 0 10px 10px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #012739;
+	background: #014464;
+	background: -moz-linear-gradient(bottom, #0272a7, #013953);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#013953), to(#0272a7));
+	-moz-box-shadow:inset 0px 0px 1px #edf9ff;
+	-webkit-box-shadow:inset 0px 0px 1px #edf9ff;
+	box-shadow:inset 0px 0px 1px #edf9ff;
+	color: #F4F4F4;
+}
+
+.pers_cabinet_btn:hover {
+	-webkit-transform: scale(1.1);
+     transform: scale(1.1);
+}
+
+.content a {
+	text-decoration: none;
+}
+
+.double_line_btn {
+	height: 35px;
+	padding-top: 5px;
+	line-height: 1.3;
+}
+
+.current {
+	background: #F4F4F4;
+	background: -moz-linear-gradient(bottom, #b95d04, #f67c06);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b95d04), to(#dc1430));
+}
+
+.exit {
+	background: #F4F4F4;
+	background: -moz-linear-gradient(bottom, #720918, #bf0a24);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#720918), to(#bf0a24));
+}
+
+.pers_data {
+	width: 816px;
+	height: 510px;
+	float: left;
+	margin: 10px 10px;
+}
+
+.pers_data p {
+	font-size: 2em;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.title p {
+	font-size: 3em;
+	text-align: center;
+	font-style: italic;	
+}
+
+.table {
+	width: 600px;
+	border: 1px solid #9a9a9a;;
+	border-collapse: collapse;
+	margin: 10px auto;
+}
+.table td, th {
+	border: 1px solid #9a9a9a;
+	height: 30px;
+}
+
+.left-column {
+	width: 170px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 15px;
+}
+
+.right-column {
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 15px;
+}
