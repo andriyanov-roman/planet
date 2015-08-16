@@ -3,10 +3,9 @@
 body {
 	font: 12px Arial, Verdana, Tahoma, sans-serif;
 }
-
+								/*Header*/
 .header {	
 	height: 100px;
-	border: 1px solid #000;
 }
 
 .logo {
@@ -16,27 +15,115 @@ body {
 	float: left;
 }
 
-.sidebar {
-	width: 280px;
-	height: 700px;
-	border: 1px solid #000;
-	text-align: center;
-	float: left;
-}
-
-.content {
-	margin-left: 280px;
-	text-align: center;
-}
+								/*Log In form*/
 
 .login {
+	height: 16px;
+	width:250px;
 	float: right;
 	margin: 20px 20px 0 0;
 }
 
-.login a{
+.login a {
+	text-decoration: none;
+	border-bottom: 1px dashed #0270A3;
+	color: #0270A3;
+}
+
+.login span {
+	margin-left: 5px;
+}
+
+.login a:hover {
+	color: red;
+}
+
+.hidden-login {
+	display: none;
+}
+
+#login-form {
+	padding: 40px 20px  15px  20px;
+	background-color: #fff;
+	border: 2px solid #0f84cb;
+	border-radius: 10px;
+	max-width: 225px;
+	margin: auto;
+	position: relative;
+}
+
+#login-form span {
+	font-weight: bold;
+}
+
+#login-form input, #reg-form input{
+	padding: 5px 5px;
+	margin: 5px 0 10px 0;
+	border: 1px solid #0f84cb;
+	border-radius: 5px;
+	width: 213px;
+}
+
+#login-form a {
+	color: #000;
 	text-decoration: none;
 }
+
+#login-form a:hover {
+	color: #0f84cb;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#login-form #login-btn {
+	width: 70px;
+	margin: 10px 0 0 77px;
+}
+
+#reg {
+	float: right;
+}
+								/*Registration form*/
+
+.registration {
+	width: 225px;
+	height: 350px;
+	border-radius: 5px;
+	margin: 50px auto;
+	padding: 20px 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.registration p {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.registration #reg-form #reg-checkbox {
+	width: 13px;
+	height: 13px;
+}
+
+.registration #reg-btn {
+	width: 150px;
+	margin: 15px 0 0 37px;
+}
+
+.log-reg-buttons {
+	height: 25px;
+	border: 1px solid #0d679d;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #0f84cb;
+}
+
+.log-reg-buttons:hover {
+	color: #fffc00;
+	cursor: pointer;
+}
+
+								/*Goods box*/
 
 .good-box {
 	width: 200px;
@@ -58,101 +145,8 @@ body {
 
 .good-box p {
 	font-weight: bold;
-	
 }
 
 .good-box img {
 	margin: 10px auto;
 }
-
-.hidden-login {
-	display: none;
-}
-
-.hidden-registration {
-	display: none;
-}
-
-form {
-	padding: 40px 20px  15px  20px;
-	background-color: #fff;
-	border: 2px solid #0f84cb;
-	border-radius: 10px;
-	max-width: 225px;
-	margin: auto;
-	position: relative;
-}
-
-form span {
-	font-weight: bold;
-}
-
-form input {
-	padding: 5px 5px;
-	margin: 5px 0 10px 0;
-	border: 1px solid #0f84cb;
-	border-radius: 5px;
-	width: 213px;
-}
-
-form a {
-	color: #000;
-	text-decoration: none;
-}
-
-form a:hover {
-	color: #0f84cb;
-	text-decoration: underline;
-	font-weight: bold;
-}
-
-form #reg {
-	float: right;
-}
-
-.log-reg-buttons {
-	height: 25px;
-	border: 1px solid #0d679d;
-	border-radius: 5px;
-	color: #ffffff;
-	background-color: #0f84cb;
-}
-
-.log-reg-buttons:hover {
-	color: #fffc00;
-	cursor: pointer;
-}
-
-#login-btn {
-	width: 70px;
-	margin: 10px 0 0 77px;
-}
-
-.user-agreement {
-	position: relative;
-	margin-bottom: 10px;
-	max-width: 225px;
-	height: 15px;
-}
-
-.user-agreement span {
-	margin-left: 20px;
-}
-
-.user-agreement a {
-	color: #0f84cb;
-	text-decoration: underline;
-	font-weight: bold;
-}
-
-form input[type="checkbox"] {
-	position: absolute;
-	width: 15px;
-	margin: auto;
-}
-
-#reg-btn {
-	width: 150px;
-	margin: 15px 0 0 37px;
-}
-
