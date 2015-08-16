@@ -32,12 +32,18 @@ public class Profile implements ProfileService {
 
         Product holodilnik = new Product();
         holodilnik.setName("This is Holodilnik");
+        holodilnik.setPrice(10000.00);
+        holodilnik.setId(121);
 
         Product iphone = new Product();
         iphone.setName("This is iPhone");
+        iphone.setPrice(18000.00);
+        iphone.setId(421);
 
         Product duhovka = new Product();
         duhovka.setName("This is Duhovka");
+        duhovka.setPrice(7000.00);
+        duhovka.setId(235);
 
 
         suggestedGoods[0] = holodilnik;
