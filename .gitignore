@@ -2,6 +2,14 @@
 *.iml
 *.class
 
+
+#Eclipse
+.classpath
+.project
+.settings/
+target/
+.gitignore
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

@@ -1,23 +1,32 @@
 package planet.servlets;
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/myInfo","/mycabinet"})
-public class LoginFilter implements Filter {
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-    }
 
-    @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-    }
+//@WebFilter(urlPatterns = {"/myInfo","/mycabinet"})
+@WebFilter("/login/*")
+public class LoginFilter extends BaseFilter {
 
-    @Override
-    public void destroy() {
-
-    }
+	@Override
+	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
+		if(request.getRequestURI().equals("/planet/login")){
+			request.getRequestDispatcher("/LoginServlet").forward(request, response);
+			return;
+		}
+		HttpSession session = request.getSession(false);
+		if(session!=null){
+			if((boolean)session.getAttribute("LOG_STATUS")){
+				chain.doFilter(request, response);
+				return;
+			}
+		}
+		response.sendRedirect("/planet");
+	}
 }
