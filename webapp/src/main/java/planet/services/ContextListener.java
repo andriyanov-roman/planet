@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebListener;
 import java.io.File;
 
 
-@WebListener("application context listener")
+@WebListener
 public class ContextListener implements ServletContextListener{
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {

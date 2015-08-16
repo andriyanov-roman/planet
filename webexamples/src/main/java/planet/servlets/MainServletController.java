@@ -1,5 +1,6 @@
 package planet.servlets;
 
+import planet.entities.Employee;
 import planet.entities.User;
 
 import javax.servlet.RequestDispatcher;
@@ -48,8 +49,13 @@ public class MainServletController extends HttpServlet {
         map.put("Key", "value");
         User user = new User();
         user.setName(name);
+        Employee e = new Employee();
+        String[] array = {"test", "testtwo","testthree"};
+        e.setName("Gena Sipakov");
         req.setAttribute("user", user);
         req.setAttribute("map", map);
+        req.setAttribute("emplyee", e);
+        req.setAttribute("array", array);
         RequestDispatcher view = req.getRequestDispatcher("jsp/result.jsp");
         view.forward(req, resp);
     }

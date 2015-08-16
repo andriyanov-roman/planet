@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        log.info("User is trying to sign in");
+        log.info("User is trying to sign in");
 //        UserValidatorService validator = new UserValidatorService();
         String login = req.getParameter("name");
         String pass = req.getParameter("password");
