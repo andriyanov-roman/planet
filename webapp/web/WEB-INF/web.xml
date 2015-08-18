@@ -20,4 +20,8 @@
         <param-name>log4j-config-location</param-name>
         <param-value>WEB-INF/log4j.properties</param-value>
     </context-param>
+    <!--Apache tiles listener-->
+    <listener>
+        <listener-class>org.apache.tiles.web.startup.simple.SimpleTilesListener</listener-class>
+    </listener>
 </web-app>
