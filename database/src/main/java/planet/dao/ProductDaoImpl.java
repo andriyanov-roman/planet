@@ -10,14 +10,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by oleksii on 14.08.15.
- */
 public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String, Product> {
 
     @Override
     public void delete(Product product) {
-        try (Connection connection = ConnectionFactory.getConnection();
+        try (Connection connection = ConnectionFactory.getConnection()
         ) {
             try {
                 connection.setAutoCommit(false);
@@ -44,7 +41,7 @@ public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String
 
     @Override
     public void update(Product product) {
-        try (Connection connection = ConnectionFactory.getConnection();
+        try (Connection connection = ConnectionFactory.getConnection()
         ) {
             try {
                 connection.setAutoCommit(false);
@@ -72,7 +69,7 @@ public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String
 
     @Override
     public void insert(Product product) {
-        try (Connection connection = ConnectionFactory.getConnection();
+        try (Connection connection = ConnectionFactory.getConnection()
         ) {
             try {
                 connection.setAutoCommit(false);
@@ -101,7 +98,7 @@ public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String
     @Override
     public Product select(String key) {
         Product product = new Product();
-        try (Connection connection = ConnectionFactory.getConnection();
+        try (Connection connection = ConnectionFactory.getConnection()
         ) {
             try {
                 String sqlGood = "SELECT * FROM product WHERE name = ?";
@@ -109,7 +106,7 @@ public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String
 
                 statement.setString(1, key);
 
-                ResultSet rs= statement.executeQuery();
+                ResultSet rs = statement.executeQuery();
 
                 product.setCategory_id(rs.getInt("category_id"));
                 product.setPrice(rs.getDouble("price"));
@@ -118,6 +115,28 @@ public class ProductDaoImpl extends SuperEntity implements CrudGeneralDao<String
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+
+    public Product select(int productId) {
+        Product product = new Product();
+        try (Connection connection = ConnectionFactory.getConnection()) {
+            String sqlGood = "SELECT * FROM product WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(sqlGood);
+
+            statement.setInt(1, productId);
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                product.setCategory_id((int) rs.getLong("category_id"));
+                product.setPrice(rs.getDouble("price"));
+                product.setName(rs.getString("name"));
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

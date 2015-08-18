@@ -26,24 +26,23 @@ public class Profile implements ProfileService {
     }
 
     @Override
-    public Profile getUserProfile(String login)
-    {
+    public Profile getUserProfile(String login) {
         this.login = login;
 
         Product holodilnik = new Product();
         holodilnik.setName("This is Holodilnik");
         holodilnik.setPrice(10000.00);
-        holodilnik.setId(121);
+        holodilnik.setId(5);
 
         Product iphone = new Product();
         iphone.setName("This is iPhone");
         iphone.setPrice(18000.00);
-        iphone.setId(421);
+        iphone.setId(6);
 
         Product duhovka = new Product();
         duhovka.setName("This is Duhovka");
         duhovka.setPrice(7000.00);
-        duhovka.setId(235);
+        duhovka.setId(4);
 
 
         suggestedGoods[0] = holodilnik;

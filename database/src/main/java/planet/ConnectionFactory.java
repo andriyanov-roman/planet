@@ -21,6 +21,7 @@ public class ConnectionFactory {
     }
 
     private Connection createConnection(){
+        registerDriver();
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -34,7 +35,8 @@ public class ConnectionFactory {
         return getInstance().createConnection();
     }
 
-    private ConnectionFactory(){};
+    private ConnectionFactory(){}
+
     public static ConnectionFactory getInstance(){
         if (instance == null){
             return new ConnectionFactory();

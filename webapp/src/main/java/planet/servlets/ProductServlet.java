@@ -16,8 +16,9 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductDaoImpl productDao = new ProductDaoImpl();
         //Need method that return Product instance from DB by id
-        Product product = productDao.select(request.getParameter("id"));
-        request.setAttribute("product",product);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Product product = productDao.select(id);
+        request.setAttribute("product", product);
         request.getRequestDispatcher("jsp/product.jsp").forward(request, response);
     }
 }
