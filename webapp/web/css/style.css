@@ -52,16 +52,16 @@ body {
 	position: relative;
 }
 
-#login-form span {
+#login-form span, #passrec-form span {
 	font-weight: bold;
 }
 
-#login-form input, #reg-form input{
+#login-form input, #reg-form input, #passrec-form input {
 	padding: 5px 5px;
 	margin: 5px 0 10px 0;
 	border: 1px solid #0f84cb;
 	border-radius: 5px;
-	width: 213px;
+	width: 224px;
 }
 
 #login-form a {
@@ -82,6 +82,29 @@ body {
 
 #reg {
 	float: right;
+}
+								/*Password recovery form*/
+.hidden-passrecovery {
+	display: none;
+}
+
+#passrec-form {
+	padding: 40px 20px  15px  20px;
+	background-color: #fff;
+	border: 2px solid #0f84cb;
+	border-radius: 10px;
+	max-width: 225px;
+	margin: auto;
+	position: relative;
+}
+
+#passrec-form #passrec-btn {
+	width: 80px;
+	margin: 10px 0 0 72px;
+}
+
+#passrec-form p {
+	font-size: 0.8em;
 }
 								/*Registration form*/
 
@@ -122,9 +145,7 @@ body {
 	color: #fffc00;
 	cursor: pointer;
 }
-
-								/*Goods box*/
-
+									/*Goods box*/
 .good-box {
 	width: 200px;
 	height: 270px;
