@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 //@WebFilter(urlPatterns = {"/myInfo","/mycabinet"})
 @WebFilter("/login/*")
 public class LoginFilter extends BaseFilter {
-
 	@Override
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 		if(request.getRequestURI().equals("/planet/login")){

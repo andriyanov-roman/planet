@@ -1,5 +1,6 @@
 package planet.servlets;
 
+import planet.controler.ControllerFactory;
 import planet.controler.ResponseController;
 
 import javax.servlet.RequestDispatcher;
@@ -15,11 +16,20 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String action = req.getParameter("action");
-        ControllersHandler handler = new ControllersHandler();
-        ResponseController controller = handler.getController(action);
-        RequestDispatcher dispatcher = getServletContext()
-                .getRequestDispatcher(controller.getResponse(resp,req));
-        super.doPost(req, resp);
+        processRequest(req,resp);
+
+    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        processRequest(req,resp);
+    }
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = (String) request.getAttribute("action");
+        ControllerFactory factory = new ControllerFactory();
+        ResponseController controller = factory.getController(action);
+        request.getRequestDispatcher(controller
+                .getResponse(response,request))
+                .forward(request,response);
     }
 }
