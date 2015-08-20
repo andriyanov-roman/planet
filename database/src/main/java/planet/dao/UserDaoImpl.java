@@ -1,6 +1,7 @@
 package planet.dao;
 
 import planet.ConnectionFactory;
+import planet.Utils;
 import planet.dao.interfaces_dao.CrudGeneralDao;
 import planet.entity.User;
 import planet.entity.SuperEntity;
@@ -80,7 +81,7 @@ public class UserDaoImpl extends SuperEntity implements CrudGeneralDao<String, U
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 statement.setString(1, user.getLogin());
-                statement.setString(2, user.getPassword());
+                statement.setString(2, Utils.encrypt(user.getPassword()));
                 statement.setInt(3, user.getRoleId());
                 statement.addBatch();
 
