@@ -14,9 +14,17 @@
             <input type="text" name="name" placeholder="Name" required/><br>
             <span>Password:</span><br />
             <input type="password" name="password" placeholder="Password" required/><br>
-            <a href="#">Forgot password?</a>
+            <a href="#passrec-form" class="passrec-popup">Forgot password?</a>
             <a href="../html/Registration-page.html" id="reg">Register</a>
             <input type="submit" class="log-reg-buttons" id="login-btn" value="Log In"/>
+        </form>
+    </div>
+    <div class="hidden-passrecovery">
+        <form id="passrec-form" method="post" action="#">
+            <span>Напомнить пароль</span>
+            <input type="email" name="email" placeholder="email" required/><br>
+            <p>Введите адрес почты, который вы указывали при регистрации, на этот адрес отправим пароль.</p>
+            <input type="submit" class="log-reg-buttons" id="passrec-btn" value="Отправить"/>
         </form>
     </div>
 </div>
