@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <div class="header">
     <div class="logo">
-        <a href="../Main.html"><img src="../img/shop-logo.png" alt="Shop-logo"></a>
+        <a href="../main.jsp"><img src="../img/shop-logo.png" alt="Shop-logo"></a>
     </div>
     <div class="login">
         Hello,
@@ -15,7 +15,7 @@
             <span>Password:</span><br />
             <input type="password" name="password" placeholder="Password" required/><br>
             <a href="#passrec-form" class="passrec-popup">Forgot password?</a>
-            <a href="../html/Registration-page.html" id="reg">Register</a>
+            <a href="../jsp/reg-page.jsp" id="reg">Register</a>
             <input type="submit" class="log-reg-buttons" id="login-btn" value="Log In"/>
         </form>
     </div>

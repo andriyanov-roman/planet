@@ -13,4 +13,8 @@
     <definition name="myapp.personal-cabinet" extends="myapp.homepage" template="/layouts/classic.jsp">
         <put-attribute name="body" value="/tiles/perscab_body.jsp" />
     </definition>
+
+    <definition name="myapp.registration-page" extends="myapp.homepage" template="/layouts/classic.jsp">
+        <put-attribute name="body" value="/tiles/regpage_body.jsp" />
+    </definition>
 </tiles-definitions>
