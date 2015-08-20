@@ -6,11 +6,11 @@
             <li><a href="#" class="drop">Телефоны, MP3</a>
                 <div class="dropdown_1column">
                     <div class="goods-box">
-                        <a href="#"><img src="img/smartphones.png" alt="Смартфоны" /></a>
+                        <a href="#"><img src="../img/smartphones.png" alt="Смартфоны" /></a>
                         <a href="#"><p>Смартфоны</p></a>
                     </div>
                     <div class="goods-box">
-                        <a href="#"><img src="img/imp3.png" alt="Смартфоны" /></a>
+                        <a href="#"><img src="../img/imp3.png" alt="Смартфоны" /></a>
                         <a href="#"><p>MP3</p></a>
                     </div>
                 </div>

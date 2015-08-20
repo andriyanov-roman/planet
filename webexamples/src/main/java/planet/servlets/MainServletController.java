@@ -51,7 +51,7 @@ public class MainServletController extends HttpServlet {
         user.setName(name);
         Employee e = new Employee();
         String[] array = {"test", "testtwo","testthree"};
-        e.setName("Gena Sipakov");
+        e.setEname("Gena Sipakov");
         req.setAttribute("user", user);
         req.setAttribute("map", map);
         req.setAttribute("emplyee", e);

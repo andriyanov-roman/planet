@@ -1,25 +1,66 @@
 package planet.entities;
 
-/**
- * Created by ubn-rok on 11.08.15.
- */
+
+import javax.persistence.*;
+
+@Entity
+@Table
+@NamedQuery(query = "Select e from Employee e where e.eid = :id", name = "find employee by id")
 public class Employee {
-    private String name;
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-    public String getName() {
-        return name;
+    private int eid;
+    private String ename;
+    private double salary;
+    private String deg;
+
+    public Employee(int eid, String ename, double salary, String deg) {
+        super();
+        this.eid = eid;
+        this.ename = ename;
+        this.salary = salary;
+        this.deg = deg;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Employee() {
+        super();
     }
 
-    public Long getId() {
-        return id;
+    public int getEid() {
+        return eid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEid(int eid) {
+        this.eid = eid;
+    }
+
+    public String getEname() {
+        return ename;
+    }
+
+    public void setEname(String ename) {
+        this.ename = ename;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getDeg() {
+        return deg;
+    }
+
+    public void setDeg(String deg) {
+        this.deg = deg;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [eid=" + eid + ", ename=" + ename + ", salary=" + salary + ", deg=" + deg + "]";
     }
 }
