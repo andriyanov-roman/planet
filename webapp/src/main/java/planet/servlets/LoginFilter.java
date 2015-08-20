@@ -18,8 +18,9 @@ public class LoginFilter extends BaseFilter {
 	@Override
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 		if(request.getRequestURI().equals("/planet/login")){
-            Enumeration<String> list = request.getHeaderNames();
             request.setAttribute("action","login");
+            request.setAttribute("name","admin");
+            request.setAttribute("password","admin");
 			request.getRequestDispatcher("/MainServlet").forward(request, response);
 			return;
 		}

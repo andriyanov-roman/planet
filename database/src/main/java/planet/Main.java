@@ -12,20 +12,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args){
-        FinReportDaoImpl dao = new FinReportDaoImpl();
-        List<FinReport> fr = new ArrayList<FinReport>();
-        fr = dao.select();
-
-        for (int i=0; i<fr.size(); i++)
-        {
-            System.out.print(fr.get(i).getOrderDate()+"\t");
-            System.out.print(fr.get(i).getLogin()+"\t");
-            System.out.print(fr.get(i).getProductName()+"\t");
-            System.out.print(fr.get(i).getProductQty()+"\t");
-            System.out.print(fr.get(i).getAmount()+"\n");
-        }
-
-
+        Utils.encrypt("blablajujyujyukgrklgjlrkegjreklgjerklger");
     }
 
 }

@@ -9,4 +9,8 @@
         <put-attribute name="body" value="/tiles/body.jsp" />
         <put-attribute name="footer" value="/tiles/footer.jsp" />
     </definition>
+
+    <definition name="myapp.personal-cabinet" extends="myapp.homepage" template="/layouts/classic.jsp">
+        <put-attribute name="body" value="/tiles/perscab_body.jsp" />
+    </definition>
 </tiles-definitions>
