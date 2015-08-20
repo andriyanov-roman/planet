@@ -9,5 +9,5 @@ import javax.servlet.http.HttpServletResponse;
  * Created by randriyanov on 09.08.15.
  */
 public interface ResponseController {
-    String getResponse(HttpServletResponse response, HttpServletRequest request);
+    Container getResponse(HttpServletResponse response, HttpServletRequest request);
 }
