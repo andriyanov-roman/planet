@@ -26,6 +26,6 @@ public class UserRole extends SuperEntity {
     }
 
     public void setName(String name) {
-        this.code = name;
+        this.name = name;
     }
 }
