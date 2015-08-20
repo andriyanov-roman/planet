@@ -25,7 +25,6 @@ public class PersistenceTest {
         tx.commit();
 // 4. Выполняет именованный запрос
         book = em.createNamedQuery("findBookH2G2", Book.class).getSingleResult();
-        book = em.createNamedQuery("findBookH2G2", Book.class).getSingleResult();
 // 5. Закрывает EntityManager и EntityManagerFactory
 
         NewsId pk = new NewsId("Richard Wright has died on September 2008", "EN");
