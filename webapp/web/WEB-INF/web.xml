@@ -14,7 +14,7 @@
         <url-pattern>/hello.do</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>Main.html</welcome-file>
+        <welcome-file>main.jsp</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>log4j-config-location</param-name>
