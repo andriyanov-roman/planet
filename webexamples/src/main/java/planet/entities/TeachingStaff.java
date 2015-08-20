@@ -1,14 +1,12 @@
 package planet.entities;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 @Entity
 //this is for Type Single Table
 //@DiscriminatorValue( value="TS" )
-@Inheritance(strategy = InheritanceType.JOINED)
+//this is for Type JoinColumn
+//@PrimaryKeyJoinColumn(referencedColumnName="sid")
 public class TeachingStaff extends Staff {
     private String qualification;
     private String subjectexpertise;

@@ -3,9 +3,13 @@ package planet.entities;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "NS")
+//this is for Type Single Table
+//@DiscriminatorValue(value = "NS")
+//this is for Type JoinColumn
+//@PrimaryKeyJoinColumn(referencedColumnName="sid")
 public class NonTeachingStaff extends Staff {
     private String areaexpertise;
 
