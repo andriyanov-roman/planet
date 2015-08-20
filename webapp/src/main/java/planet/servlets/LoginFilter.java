@@ -1,6 +1,8 @@
 package planet.servlets;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -16,7 +18,9 @@ public class LoginFilter extends BaseFilter {
 	@Override
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 		if(request.getRequestURI().equals("/planet/login")){
-			request.getRequestDispatcher("/LoginServlet").forward(request, response);
+            Enumeration<String> list = request.getHeaderNames();
+            request.setAttribute("action","login");
+			request.getRequestDispatcher("/MainServlet").forward(request, response);
 			return;
 		}
 		HttpSession session = request.getSession(false);

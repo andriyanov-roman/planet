@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("LOG_STATUS", true);
             req.getRequestDispatcher("jsp/profile.jsp").forward(req, resp);
         } else {
-            resp.sendRedirect("jsp/notOk.jsp");
+            req.getRequestDispatcher("jsp/notOk.jsp").forward(req, resp);
         }
 
     }

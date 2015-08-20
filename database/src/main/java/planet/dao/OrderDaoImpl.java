@@ -21,7 +21,7 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "DELETE FROM order WHERE user_id = ? and product_id = ? and order_date = ?";
+                String sqlGood = "DELETE FROM planet.order WHERE user_id = ? and product_id = ? and order_date = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 statement.setInt(1, order.getUserId());
@@ -50,7 +50,7 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "UPDATE order SET product_id = ? AND product_qty = ? WHERE user_id = ? AND order_date = ?";
+                String sqlGood = "UPDATE planet.order SET product_id = ? AND product_qty = ? WHERE user_id = ? AND order_date = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 statement.setInt(1, order.getProductId());
@@ -66,7 +66,6 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
 
             } catch (SQLException e) {
                 connection.rollback();
-                e.printStackTrace();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,7 +79,8 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
             try {
                 connection.setAutoCommit(false);
 
-                String sqlGood = "INSERT INTO order(user_id, product_id, product_qty, amount, order_date) VALUES (?,?,?,?,?)";
+                String sqlGood = "INSERT INTO planet.order(user_id, product_id, product_qty, amount, order_date) " +
+                                 " VALUES (?,?,?,?,?)";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 Date date = new Date();
@@ -100,8 +100,8 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
                 connection.commit();
 
             } catch (SQLException e) {
-                connection.rollback();
                 e.printStackTrace();
+                connection.rollback();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -118,7 +118,7 @@ public class OrderDaoImpl extends SuperEntity implements CrudGeneralDao<String, 
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
-                String sqlGood = "SELECT * FROM order WHERE user_id = ?";
+                String sqlGood = "SELECT * FROM planet.order WHERE user_id = ?";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
 
                 statement.setInt(1, userId);

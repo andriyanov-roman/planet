@@ -18,7 +18,7 @@ public class LoginController implements ResponseController {
         user.setLogin(login);
         user.setPassword(password);
         request.setAttribute("user", user);
-        return "PERSONAL_CABINET_ADDR";
+        return "jsp/profile.jsp";
 
     }
 }
