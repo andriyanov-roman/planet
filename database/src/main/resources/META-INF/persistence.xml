@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="planet_test">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://db4free.net:3306/planet"/>
+            <property name="javax.persistence.jdbc.user" value="planet"/>
+            <property name="javax.persistence.jdbc.password" value="planet234"/>
+            <property name ="hibernate.show_sql" value = "true" />
+        </properties>
+    </persistence-unit>
+</persistence>
+
+        <!--http://www.radcortez.com/jpa-database-schema-generation/-->
+        <!--http://stackoverflow.com/questions/5640778/hibernate-sessionfactory-vs-entitymanagerfactory-->
+        <!--https://github.com/eclipse/eclipselink.runtime.git-->
+        <!--http://javac-dmx.blogspot.ru/2015/01/11-hibernate.html-->

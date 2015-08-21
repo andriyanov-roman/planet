@@ -1,19 +1,38 @@
 package planet.entity;
 
+import javax.persistence.*;
+
 /**
  * Created by oleksii on 14.08.15.
  */
-public class Product extends SuperEntity{
-    private int categoryId;
+@Entity
+@Table(name="product", uniqueConstraints = @UniqueConstraint(columnNames = {"category_id", "name"}))
+public class Product{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @OneToOne
+    @JoinColumn(name = "category_id", referencedColumnName="id", nullable = false)
+    private ProductCategory category;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private double price;
 
-    public int getCategoryId() {
-        return categoryId;
+    public long getId() {
+        return id;
     }
 
-    public void setCategory_id(int category_id) {
-        this.categoryId = category_id;
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public ProductCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(ProductCategory category) {
+        this.category = category;
     }
 
     public String getName() {

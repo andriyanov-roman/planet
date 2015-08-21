@@ -1,12 +1,23 @@
 package planet.entity;
 
+import planet.Utils;
+
+import javax.persistence.*;
+
 /**
  * Created by oleksii on 09.08.15.
  */
-public class User extends SuperEntity{
+@Entity @Table(name = "user")
+public class User{
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(unique = true, nullable = false)
     private String login;
+    @Column(nullable = false, length = 32)
     private String password;
-    private int roleId;
+    @OneToOne
+    @JoinColumn(name = "role_id", referencedColumnName="id", nullable = false)
+    private UserRole role;
 
     public User(String login) {
         this.login = login;
@@ -27,14 +38,14 @@ public class User extends SuperEntity{
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = Utils.hash(password);
     }
 
-    public int getRoleId() {
-        return roleId;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

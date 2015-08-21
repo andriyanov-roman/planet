@@ -1,35 +1,24 @@
 package planet;
 
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 
 /**
  * Created by oleksii on 20.08.15.
  */
 public class Utils {
-
-    final private static String key1 = "QWERTYUIOP123456"; // 128 bit key
-    final private static String key2 = "ThisIsASecretKet";
-
-    public static String encrypt(String value) {
+    public static String hash(String str)
+    {
+        String sHash = new String();
         try {
-            IvParameterSpec iv = new IvParameterSpec(key2.getBytes("UTF-8"));
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(str.getBytes());
+            sHash = (new HexBinaryAdapter()).marshal(md.digest(str.getBytes()));
 
-            SecretKeySpec skeySpec = new SecretKeySpec(key1.getBytes("UTF-8"),
-                    "AES");
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
-            cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
-            byte[] encrypted = cipher.doFinal(value.getBytes());
-
-            return Base64.getEncoder().encodeToString(encrypted);
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
-        return null;
+        return sHash;
     }
 }

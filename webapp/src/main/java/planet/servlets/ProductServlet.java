@@ -1,6 +1,5 @@
 package planet.servlets;
 
-import planet.dao.ProductDaoImpl;
 import planet.entity.Product;
 
 import javax.servlet.ServletException;
