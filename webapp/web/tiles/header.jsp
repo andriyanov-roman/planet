@@ -2,7 +2,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <div class="header">
     <div class="logo">
-        <a href="../main.jsp"><img src="../img/shop-logo.png" alt="Shop-logo"></a>
     </div>
     <div class="login">
         ${Text['HELLO']},
