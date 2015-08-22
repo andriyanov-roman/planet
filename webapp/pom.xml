@@ -76,6 +76,11 @@
                 </configuration>
             </plugin>
         </plugins>
+            <resources>
+                <resource>
+                    <directory>src/main/java/propertyfiles</directory>
+                </resource>
+            </resources>
     </build>
 
 </project>

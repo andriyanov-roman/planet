@@ -5,7 +5,7 @@
         <a href="../main.jsp"><img src="../img/shop-logo.png" alt="Shop-logo"></a>
     </div>
     <div class="login">
-        Hello,
+        ${Text['HELLO']},
         <a href="#login-form" class="login-popup"><img src="../img/user_icon.png" alt="user icon" /><span>login to personal cabinet</span></a>
     </div>
     <div class="hidden-login">
