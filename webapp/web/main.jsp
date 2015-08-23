@@ -5,9 +5,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
-        <link href="css/magnific-popup.css" type="text/css" rel="stylesheet" />
-        <link href="css/menu_style.css" type="text/css" rel="stylesheet" />
+        <link href="${pageContext.request.contextPath}/css/style.css" type="text/css" rel="stylesheet" />
+        <link href="${pageContext.request.contextPath}/css/magnific-popup.css" type="text/css" rel="stylesheet" />
+        <link href="${pageContext.request.contextPath}/css/menu_style.css" type="text/css" rel="stylesheet" />
         <title>Planet-shop</title>
     </head>
     <body>

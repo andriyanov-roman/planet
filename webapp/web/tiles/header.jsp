@@ -1,21 +1,22 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page pageEncoding="UTF-8" %>
+
 <div class="header">
     <div class="logo">
-        <a href="../main.jsp"><img src="../img/shop-logo.png" alt="Shop-logo"></a>
+        <a href="/planet"><img src="${pageContext.request.contextPath}/img/shop-logo.png" alt="Shop-logo"></a>
     </div>
-    <div class="login">
-        Hello,
-        <a href="#login-form" class="login-popup"><img src="../img/user_icon.png" alt="user icon" /><span>login to personal cabinet</span></a>
-    </div>
+    <jsp:include page="login_form.jsp" />
+    <div style="clear: both"></div>
+	<%--
     <div class="hidden-login">
-        <form id="login-form" method="post" action="login">
+        <form id="login-form" method="post">
+       		<input type="hidden" name="command" value="Log_In" />
             <span>Login:</span><br />
             <input type="text" name="name" placeholder="Name" required/><br>
             <span>Password:</span><br />
             <input type="password" name="password" placeholder="Password" required/><br>
             <a href="#passrec-form" class="passrec-popup">Forgot password?</a>
-            <a href="../jsp/reg-page.jsp" id="reg">Register</a>
+            <a href="../html/Registration-page.html" id="reg">Register</a>
             <input type="submit" class="log-reg-buttons" id="login-btn" value="Log In"/>
         </form>
     </div>
@@ -27,4 +28,5 @@
             <input type="submit" class="log-reg-buttons" id="passrec-btn" value="Отправить"/>
         </form>
     </div>
+    --%>
 </div>

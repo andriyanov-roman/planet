@@ -8,4 +8,5 @@
     <!--<div class="video" width="565" height="315">-->
     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/UqzEwQd6TUk" frameborder="0" allowfullscreen></iframe>-->
     <!--</div>-->
+    <jsp:include page="${sessionScope.BodyJsp}" />
 </div>

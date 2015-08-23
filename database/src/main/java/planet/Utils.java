@@ -10,12 +10,11 @@ import java.security.NoSuchAlgorithmException;
 public class Utils {
     public static String hash(String str)
     {
-        String sHash = new String();
+        String sHash = "";
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(str.getBytes());
             sHash = (new HexBinaryAdapter()).marshal(md.digest(str.getBytes()));
-
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
