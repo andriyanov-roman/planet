@@ -15,19 +15,59 @@ body {
 	float: left;
 }
 
+.buttonMenu {
+	float:right;
+	display: table-row;
+	clear: right;
+	margin-right: 200px;
+}
+
+.buttonMenu li {
+	float: left;
+	margin-left: 30px;
+}
+.buttonBasket{
+	position: relative;
+	right: 350px;
+	display: table-row;
+}
+
+
 								/*Log In form*/
 
 .login {
-	height: 16px;
-	width:250px;
+	width:320px;
 	float: right;
-	margin: 20px 20px 0 0;
+	margin: 5px 20px 0 0;
+}
+
+.field {
+	text-align: right;
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+
+.customfield {
+	text-align: left;
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+
+label {
+	float: left;
+	padding-right: 3px;
+}
+
+.loginform {
+	float: left;
+	margin-right: 5px;
 }
 
 .login a {
 	text-decoration: none;
 	border-bottom: 1px dashed #0270A3;
 	color: #0270A3;
+	margin-bottom: 5px;
 }
 
 .login span {
@@ -78,10 +118,6 @@ body {
 #login-form #login-btn {
 	width: 70px;
 	margin: 10px 0 0 77px;
-}
-
-#reg {
-	float: right;
 }
 								/*Password recovery form*/
 .hidden-passrecovery {
@@ -139,6 +175,7 @@ body {
 	border-radius: 5px;
 	color: #ffffff;
 	background-color: #0f84cb;
+	margin: 5px;
 }
 
 .log-reg-buttons:hover {

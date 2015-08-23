@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page pageEncoding="UTF-8" %>
+<link href="${pageContext.request.contextPath}/css/pers_cabinet.css" type="text/css" rel="stylesheet" />
 <div class="content">
     <div class="left-sidebar">
         <div class="pers_cabinet_btn">Мой кабинет</div>
