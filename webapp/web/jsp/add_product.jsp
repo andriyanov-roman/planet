@@ -44,6 +44,6 @@ product(category_id.intValue(), name, price);
         </tr>
     </table>
 </form>
-
+.
 </body>
 </html>
