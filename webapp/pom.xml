@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+
     <packaging>war</packaging>
     <artifactId>webapp</artifactId>
     <dependencies>
@@ -76,6 +77,11 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java/propertyfiles</directory>
+            </resource>
+        </resources>
     </build>
 
 </project>
