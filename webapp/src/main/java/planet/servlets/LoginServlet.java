@@ -3,7 +3,7 @@ package planet.servlets;
 import org.apache.log4j.Logger;
 
 import planet.entity.User;
-import planet.services.UserValidatorService;
+//import planet.services.UserValidatorService;
 import profile.Profile;
 
 import javax.servlet.ServletException;
