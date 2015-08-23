@@ -10,10 +10,10 @@
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             <!--<property name="hibernate.dialect" value="org.hiber.dialect.PostgreSQL82Dialect"/>-->
-            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1:5432/test_db"/>
-            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <!--<property name="hibernate.hbm2ddl.auto" value="auto"/>-->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/planet"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="root"/>
             <property name ="hibernate.show_sql" value = "true" />
         </properties>
