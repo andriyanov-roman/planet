@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://planet.cdh4bmh2efrx.us-west-2.rds.amazonaws.com:3306/planet</property>
+        <property name="connection.username">planet</property>
+        <property name="connection.password">Planet@999</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="planet.entity.Hist"/>
+        <mapping class="planet.entity.Order"/>
+        <mapping class="planet.entity.ProductCategory"/>
+        <mapping class="planet.entity.Product"/>
+        <mapping class="planet.entity.User"/>
+        <mapping class="planet.entity.UserRole"/>
+    </session-factory>
+</hibernate-configuration>

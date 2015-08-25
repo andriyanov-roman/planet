@@ -8,9 +8,9 @@ public class ConnectionFactory {
 
     private static ConnectionFactory instance;
     private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String DB_URL = "jdbc:mysql://db4free.net:3306/planet";
+    private static String DB_URL = "jdbc:mysql://planet.cdh4bmh2efrx.us-west-2.rds.amazonaws.com:3306";
     private static String USER = "planet";
-    private static String PASS = "planet234";
+    private static String PASS = "Planet@999";
 
     public void registerDriver() {
         try {

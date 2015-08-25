@@ -1,6 +1,13 @@
 package planet;
 import javax.persistence.*;
 
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Restrictions;
 import planet.entity.*;
 
 /**
@@ -9,69 +16,86 @@ import planet.entity.*;
 public class Main {
 
     public static void main(String args[]) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("planet_test");
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction tx = em.getTransaction();
+        // loads configuration and mappings
+        Configuration configuration = new Configuration().configure();
+        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+                .applySettings(configuration.getProperties());
+        SessionFactory sessionFactory = null;
+        Session session = null;
+        Transaction transaction = null;
 
-        //Admin
-        User u = new User();
-        UserRole r = new UserRole();
-        r.setName("Administrators");
-        r.setCode("Admin");
+        try {
+            sessionFactory = configuration.buildSessionFactory(builder.build());
+            session = sessionFactory.openSession();
 
-        u.setLogin("admin@shop");
-        u.setPassword("admin@shop");
-        u.setRole(r);
+            //Admin
+            User u = new User();
+            UserRole r = new UserRole();
+            r.setName("Administrators");
+            r.setCode("Admin");
 
-        tx.begin();
-        em.persist(r);
-        em.persist(u);
-        tx.commit();
+            u.setLogin("admin@shop");
+            u.setPassword("admin@shop");
+            u.setRole(r);
 
-        //Customer
-        User u1 = new User();
-        UserRole r1 = new UserRole();
-        r1.setName("Customers");
-        r1.setCode("Customer");
+            transaction = session.beginTransaction();
+            session.save(r);
+            session.save(u);
+            transaction.commit();
 
-        u1.setLogin("customer1@shop");
-        u1.setPassword("customer1@shop");
-        u1.setRole(r1);
+            //Customer
+            User u1 = new User();
+            UserRole r1 = new UserRole();
+            r1.setName("Customers");
+            r1.setCode("Customer");
 
-        tx.begin();
-        em.persist(r1);
-        em.persist(u1);
-        tx.commit();
+            u1.setLogin("customer1@shop");
+            u1.setPassword("customer1@shop");
+            u1.setRole(r1);
 
-        //Product
-        ProductCategory pc = new ProductCategory();
-        pc.setCode("MILK");
-        pc.setName("Молочко");
+            transaction = session.beginTransaction();
+            session.save(r1);
+            session.save(u1);
+            transaction.commit();
 
-        Product p = new Product();
-        p.setName("Простоквашино");
-        p.setPrice(10.23);
-        p.setCategory(pc);
+            //Product
+            ProductCategory pc = new ProductCategory();
+            pc.setCode("MILK");
+            pc.setName("Молочко");
 
-        tx.begin();
-        em.persist(pc);
-        em.persist(p);
-        tx.commit();
+            Product p = new Product();
+            p.setName("Простоквашино");
+            p.setPrice(10.23);
+            p.setCategory(pc);
 
-        //Order
-        Order o = new Order();
-        o.setUser(u1);
-        o.setProduct(p);
-        o.setProductQty(3);
-        o.setAmount(p.getPrice() * o.getProductQty());
-        o.setOrderDate();
+            transaction = session.beginTransaction();
+            session.save(pc);
+            session.save(p);
+            transaction.commit();
 
-        tx.begin();
-        em.persist(o);
-        tx.commit();
+            //Order
+            Order o = new Order();
+            o.setUser(u1);
+            o.setProduct(p);
+            o.setProductQty(3);
+            o.setAmount(p.getPrice() * o.getProductQty());
+            o.setOrderDate();
 
-        em.close();
-        emf.close();
+            transaction = session.beginTransaction();
+            session.save(o);
+
+            transaction.commit();
+
+        }catch (Exception e) {
+
+        }finally {
+            if(session.isOpen()) {
+                session.close();
+            }
+            if(!sessionFactory.isClosed()) {
+                sessionFactory.close();
+            }
+        }
     }
 
 }
