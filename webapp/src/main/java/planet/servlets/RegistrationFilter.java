@@ -25,5 +25,4 @@ public class RegistrationFilter extends BaseFilter {
 		}
 		chain.doFilter(request, response);
 	}
-
 }
