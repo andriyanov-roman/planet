@@ -60,6 +60,10 @@
 					<label for="pass">${Text['HEADER_PASSWORD']}</label> <input type="password"
 						id="pass" name="password" placeholder="${Text['PLACEHOLDER_PASS']}" required />
 				</div>
+				<div>
+					<p>${error}</p>
+				</div>
+
 				<input type="submit" class="log-reg-buttons" id="login-btn"
 					value="${Text['HEADER_BT_LOGIN']}" />
 			</form>

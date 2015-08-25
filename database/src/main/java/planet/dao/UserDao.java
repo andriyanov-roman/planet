@@ -2,7 +2,6 @@ package planet.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import planet.entity.User;
@@ -23,6 +22,7 @@ public class UserDao {
         User user = (User) session.createQuery("select u from User u where u.login = :login")
                 .setString("login",login)
                 .uniqueResult();
+        session.close();
         return user;
     }
 }
