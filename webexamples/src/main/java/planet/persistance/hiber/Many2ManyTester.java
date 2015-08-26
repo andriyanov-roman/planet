@@ -20,6 +20,7 @@ public class Many2ManyTester {
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = null;
 		Session session = null;
+
 		Transaction transaction = null;
 		Book book = new Book("H2G2",12.5F,"Автостопом по Галактике",
 				"1-84023-742-2", 354, false);
@@ -27,10 +28,16 @@ public class Many2ManyTester {
 		try {
 			sessionFactory = configuration.buildSessionFactory(builder.build());
 			session = sessionFactory.openSession();
+			String sql = "SELECT * FROM Book WHERE id=1";
+			Query query = session.createQuery(sql);
+			List<Book> books = query.list();
+			String hql = "SELECT Book.title FROM Book";
+			Query hQuery = session.createQuery(hql);
 			//String hql = "FROM Employee E WHERE E.id = 10";
 			Criteria criteria = session.createCriteria(Book.class);
 			criteria.add(Restrictions.eq("price", 100));
 			transaction = session.beginTransaction();
+			SQLQuery sqlQuery = session.createSQLQuery(sql);
 			session.save(book);
 			transaction.commit();
 		}catch (Exception e) {
