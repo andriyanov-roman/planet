@@ -16,17 +16,11 @@ import planet.entity.*;
 public class Main {
 
     public static void main(String args[]) {
-        // loads configuration and mappings
-        Configuration configuration = new Configuration().configure();
-        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties());
-        SessionFactory sessionFactory = null;
         Session session = null;
         Transaction transaction = null;
 
         try {
-            sessionFactory = configuration.buildSessionFactory(builder.build());
-            session = sessionFactory.openSession();
+            session = SingletonSessionFactory.getSessionFactory().openSession();
 
             //Admin
             User u = new User();
@@ -89,11 +83,10 @@ public class Main {
         }catch (Exception e) {
 
         }finally {
-            if(session.isOpen()) {
-                session.close();
-            }
-            if(!sessionFactory.isClosed()) {
-                sessionFactory.close();
+            if (session != null) {
+                if (session.isOpen()) {
+                    session.close();
+                }
             }
         }
     }
