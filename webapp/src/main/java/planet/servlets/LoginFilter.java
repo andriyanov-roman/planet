@@ -1,7 +1,7 @@
 package planet.servlets;
 
 import java.io.IOException;
-import java.util.Enumeration;
+import java.util.Locale;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -36,6 +36,19 @@ public class LoginFilter extends BaseFilter {
 				if(!(session.getAttribute("BodyJsp")!=null && session.getAttribute("BodyJsp").equals("user_basket.jsp"))){
 					session.setAttribute("BodyJsp", null);
 				}
+				break;
+			case "lang":
+				switch (request.getParameter("lang")) {
+				case "ru":
+					log.info("language change to ru");
+					session.setAttribute("Text", new Text(new Locale("ru")));
+					break;
+				case "en":
+					log.info("language change to en");
+					session.setAttribute("Text", new Text(Locale.ENGLISH));
+					break;
+				}
+				
 			}
 		}
 			chain.doFilter(request, response);

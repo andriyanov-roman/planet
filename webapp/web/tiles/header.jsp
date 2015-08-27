@@ -29,15 +29,17 @@
         </form>
     </div>
     --%>
-    <div class="lang-switcher">
-        <img id="resultpic" src="img/ru_flag_icon.png" alt="Выбранная картинка" />
-        <form action="">
-            <select onchange="document.getElementById('resultpic').src = this.value">
-                <option value="img/ru_flag_icon.png">RUS</option>
-                <option value="img/uk_flag_icon.png">ENG</option>
-                <option value="img/ukr_flag_icon.png">UKR</option>
+<div class="lang-switcher">
+     <img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
+        <form id="lang_form" method="post">
+        	<input type="hidden" name="command" value="lang" />
+        	<input id="select_input" type="hidden" name="lang" value="" />
+        	<input type="submit" style="display: none"/>
+            <select onchange="select(this.options[this.selectedIndex].id)">
+             	<option id="ru" value="img/ru_flag_icon.png">RUS</option>
+                <option id="en" value="img/uk_flag_icon.png">ENG</option>
+                <option id="ua" value="img/ukr_flag_icon.png">UKR</option>
             </select>
-            <button id="lang-switch-btn">OK</button>
         </form>
     </div>
 </div>
