@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
  */
 public class SingletonSessionFactory {
     private static SingletonSessionFactory instance;
+    private static SessionFactory sessionFactory;
 
     private SingletonSessionFactory() {
 
@@ -25,21 +26,18 @@ public class SingletonSessionFactory {
         Configuration configuration = new Configuration().configure();
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties());
-        SessionFactory sessionFactory = null;
+        sessionFactory = null;
 
         try {
             sessionFactory = configuration.buildSessionFactory(builder.build());
         }catch (Exception e) {
-
-        }finally{
-            if(!sessionFactory.isClosed()) {
-                sessionFactory.close();
-            }
+            System.out.print(e.getMessage());
         }
 
         return sessionFactory;
     }
 
+    public static void closeSessionFactory() {sessionFactory.close();}
     public static SessionFactory getSessionFactory(){
         return getInstance().createSessionFactory();
     }

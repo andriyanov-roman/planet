@@ -104,4 +104,18 @@ public class Book {
     public void setIllustrations(Boolean illustrations) {
         this.illustrations = illustrations;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", nbOfPage=" + nbOfPage +
+                ", illustrations=" + illustrations +
+                ", tags=" + tags +
+                '}';
+    }
 }

@@ -48,4 +48,16 @@ public class User{
     public void setRole(UserRole role) {
         this.role = role;
     }
+
+    public String toString(){
+        return "ID: "+getId()+" login: "+getLogin()+" password:"+getPassword();
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }
