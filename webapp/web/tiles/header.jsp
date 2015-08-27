@@ -29,4 +29,15 @@
         </form>
     </div>
     --%>
+    <div class="lang-switcher">
+        <img id="resultpic" src="img/ru_flag_icon.png" alt="Выбранная картинка" />
+        <form action="">
+            <select onchange="document.getElementById('resultpic').src = this.value">
+                <option value="img/ru_flag_icon.png">RUS</option>
+                <option value="img/uk_flag_icon.png">ENG</option>
+                <option value="img/ukr_flag_icon.png">UKR</option>
+            </select>
+            <button id="lang-switch-btn">OK</button>
+        </form>
+    </div>
 </div>

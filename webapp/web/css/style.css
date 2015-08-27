@@ -182,6 +182,51 @@ label {
 	color: #fffc00;
 	cursor: pointer;
 }
+									/*Language switcher*/
+.lang-switcher {
+	height: 40px;
+	width: 130px;
+	position: relative;
+}
+
+.lang-switcher #resultpic {
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-left: 5px;
+	position: absolute;
+	top: 8px;
+	left: 7px;
+}
+
+.lang-switcher select {
+	height: 28px;
+	margin: 6px 0 0 6px;
+	width: 85px;
+	border-radius: 5px 0 0 5px;
+	padding-left: 30px;
+	background: #026B9D;
+	background-image: url(../img/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+	color: white;
+	border: 1px solid black;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";
+}
+
+#lang-switch-btn {
+	height: 28px;
+	background: #026B9D;
+	border-radius: 0 5px 5px 0;
+	border: 1px solid black;
+	border-left: none;
+	color: white;
+	margin-left: -3px;
+	cursor: pointer;
+}
 									/*Goods box*/
 .good-box {
 	width: 200px;
