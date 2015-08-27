@@ -6,8 +6,8 @@ import java.io.Serializable;
 @Entity
 @Table
 //this is for Type JoinColumn
-//@Inheritance(strategy = InheritanceType.JOINED)
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 //this is for Type Single Table
 //@DiscriminatorColumn(name = "type")
 public class Staff implements Serializable {

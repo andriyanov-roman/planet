@@ -9,9 +9,9 @@
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://db4free.net:3306/planet"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://planet.cdh4bmh2efrx.us-west-2.rds.amazonaws.com:3306/planet"/>
             <property name="javax.persistence.jdbc.user" value="planet"/>
-            <property name="javax.persistence.jdbc.password" value="planet234"/>
+            <property name="javax.persistence.jdbc.password" value="Planet@999"/>
             <property name ="hibernate.show_sql" value = "true" />
         </properties>
     </persistence-unit>

@@ -23,7 +23,7 @@ public class Order{
     private int productQty;
     @Column(nullable = false)
     private double amount;
-    @Column(nullable = false)
+    @Column(name = "order_date", nullable = false)
     private Timestamp orderDate;
 
     public long getId() {

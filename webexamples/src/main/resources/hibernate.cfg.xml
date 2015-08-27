@@ -5,11 +5,11 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Database connection settings -->
-        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:postgresql://127.0.0.1:5432/test_db</property>
-        <property name="connection.username">postgres</property>
+        <property name="connection.username">root</property>
         <property name="connection.password">root</property>
-        <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
         <mapping class="planet.persistance.hiber.User"/>
