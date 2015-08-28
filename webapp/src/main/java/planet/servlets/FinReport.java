@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 /**
  * Created by oleksii on 26.08.15.
  */
-@WebServlet("FinReport")
+@WebServlet("/FinReport")
 public class FinReport extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

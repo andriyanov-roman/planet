@@ -166,7 +166,16 @@ label {
 
 .registration #reg-btn {
 	width: 150px;
-	margin: 15px 0 0 37px;
+	height: auto;
+/* 	margin: 15px 0 0 37px; */
+}
+
+#reg-form div{
+	text-align: center
+}
+#reg_error{
+	height: 40px;
+	color: red;
 }
 
 .log-reg-buttons {

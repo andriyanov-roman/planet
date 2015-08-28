@@ -15,3 +15,33 @@ function select(s){
 	$("#select_input").attr('value',s);
 	$("#lang_form").trigger('submit');
 }
+function check_register_form(){
+	if($('#password').val()!==$('#password2').val()){
+		$('#reg_error').text("Пароли не равны");
+		clearInputPasswordField();
+		return false;
+	}
+	if($('#password').val().length<8){
+		$('#reg_error').text("Пароль должен содержать не менее 8 символов");
+		clearInputPasswordField();
+		return false;
+	}
+	var pw =$('#password').val();
+	var res = pw.split("");
+	  var result = true;
+	  $.each(res,function(i,val){
+	  if(!/[A-Za-z0-9_]/.test(val)){
+	  result=false	
+	  	}	
+	  });
+	if (!result){
+		$('#reg_error').text('Пароль может содержать "A-Z" ,"a-z" ,"0-9" или "_"');
+		clearInputPasswordField();
+		return false;
+	}
+}
+
+function clearInputPasswordField(){
+	$('#password').val("");
+	$('#password2').val("");
+}
