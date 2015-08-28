@@ -1,7 +1,6 @@
 package planet;
 
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import planet.entity.*;
 
 /**
@@ -13,7 +12,7 @@ public class Main {
 
         Session session = SingletonSessionFactory.getSessionFactory().openSession();
         try{
-            UserOperation uo = new UserOperation();
+            EntityOperation<User> uo = new EntityOperation<User>();
 //            User u = new User();
 //            u.setLogin("customer4@shop");
 //            u.setPassword("customer4@shop");
@@ -27,8 +26,8 @@ public class Main {
 //
 //            System.out.println("Customer added");
 //            uo.add(u, session);
-            User u = uo.get("customer3@shop", session);
-            u.setLogin("ignat@mail.ru");
+            User u = uo.get("login","ignat@mail.ru", session);
+            u.setLogin("customer_3@mail.ru");
             uo.update(u, session);
         }catch (Exception e) {
             System.out.println(e.getMessage());
