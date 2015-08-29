@@ -3,7 +3,7 @@
 	<c:when test="${sessionScope.LOG_STATUS=='true'}">
 		<div class="login">
 			<div class="loginform">
-						<img src="${pageContext.request.contextPath}/img/user_icon1.png" alt="user">
+					<img src="${pageContext.request.contextPath}/img/user_icon1.png" alt="user">
 			</div>
 			<div class="loginform">
 				<div class="customfield">
@@ -20,8 +20,7 @@
 				<c:when test="${sessionScope.role=='admin'}">
 				<li>
 					<form method="post" action="/planet/administration">
-						<input type="submit" class="log-reg-buttons"
-							value="Administration" />
+						<input type="submit" class="log-reg-buttons" value="Administration" />
 					</form>
 				</li>
 				</c:when>
@@ -60,26 +59,28 @@
 					<label for="pass">${Text['HEADER_PASSWORD']}</label> <input type="password"
 						id="pass" name="password" placeholder="${Text['PLACEHOLDER_PASS']}" required />
 				</div>
+				<a href="Registration">${Text['HEADER_REGISTER']}</a>
+				<a href="#passrec-form" id="forg-pass-link">${Text['HEADER_FORGOTPASS']}</a>
 				<input type="submit" class="log-reg-buttons" id="login-btn"
 					value="${Text['HEADER_BT_LOGIN']}" />
 			</form>
-			<div>
-				<div class="customfield">
-					<a href="#passrec-form">${Text['HEADER_FORGOTPASS']}</a>
-				</div>
-					<div class="customfield">
-						<a href="Registration">${Text['HEADER_REGISTER']}</a>
-					</div>
-			</div>
-			<div class="buttonBasket">
-				<ul>
-					<li>
-						<form method="post" action="/planet/basket">
-							<input type="submit" class="log-reg-buttons" value="Basket" />
-						</form>
-					</li>
-				</ul>
-			</div>
+			<%--<div>--%>
+				<%--<div class="customfield">--%>
+					<%--<a href="#passrec-form">${Text['HEADER_FORGOTPASS']}</a>--%>
+				<%--</div>--%>
+					<%--<div class="customfield">--%>
+						<%--<a href="Registration">${Text['HEADER_REGISTER']}</a>--%>
+					<%--</div>--%>
+			<%--</div>--%>
+			<%--<div class="buttonBasket">--%>
+				<%--<ul>--%>
+					<%--<li>--%>
+						<%--<form method="post" action="/planet/basket">--%>
+							<%--<input type="submit" class="log-reg-buttons" value="Basket" />--%>
+						<%--</form>--%>
+					<%--</li>--%>
+				<%--</ul>--%>
+			<%--</div>--%>
 		</div>
 	</c:otherwise>
 </c:choose>

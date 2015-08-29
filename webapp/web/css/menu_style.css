@@ -8,6 +8,7 @@
 	-moz-box-shadow:inset 0px 0px 1px #edf9ff;
 	-webkit-box-shadow:inset 0px 0px 1px #edf9ff;
 	box-shadow:inset 0px 0px 1px #edf9ff;
+	margin-top: 20px;
 }
 
 #menu-list {

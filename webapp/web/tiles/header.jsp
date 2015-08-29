@@ -2,6 +2,26 @@
 <%@ page pageEncoding="UTF-8" %>
 
 <div class="header">
+    <div class="top-menu">
+        <div class="lang-switcher">
+            <img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
+            <form id="lang_form" method="post">
+                <input type="hidden" name="command" value="lang" />
+                <input id="select_input" type="hidden" name="lang" value="" />
+                <input type="submit" style="display: none"/>
+                <select onchange="select(this.options[this.selectedIndex].id)">
+                    <option id="ru" value="img/ru_flag_icon.png">RUS</option>
+                    <option id="en" value="img/uk_flag_icon.png">ENG</option>
+                    <option id="ua" value="img/ukr_flag_icon.png">UKR</option>
+                </select>
+            </form>
+        </div>
+        <ul class="top-menu-list">
+            <div id="delivery-icon"><li>Home</li></div>
+            <li>Delivery</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
     <div class="logo">
         <a href="/planet"><img src="${pageContext.request.contextPath}/img/shop-logo.png" alt="Shop-logo"></a>
     </div>
@@ -29,17 +49,5 @@
         </form>
     </div>
     --%>
-<div class="lang-switcher">
-     <img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
-        <form id="lang_form" method="post">
-        	<input type="hidden" name="command" value="lang" />
-        	<input id="select_input" type="hidden" name="lang" value="" />
-        	<input type="submit" style="display: none"/>
-            <select onchange="select(this.options[this.selectedIndex].id)">
-             	<option id="ru" value="img/ru_flag_icon.png">RUS</option>
-                <option id="en" value="img/uk_flag_icon.png">ENG</option>
-                <option id="ua" value="img/ukr_flag_icon.png">UKR</option>
-            </select>
-        </form>
-    </div>
+
 </div>
