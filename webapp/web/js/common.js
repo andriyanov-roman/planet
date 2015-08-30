@@ -9,11 +9,8 @@ $(document).ready(function() {
 		return true;
 	}));
 	$('#'+$("html").attr("lang")).attr('selected','selected');
-	if($('#tryMore').attr("value")=="true"){
-		displaylogin();
-	}
 });
-function select(s){
+function select_lang(s){
 	$("#select_input").attr('value',s);
 	$("#lang_form").trigger('submit');
 }
@@ -48,11 +45,8 @@ function clearInputPasswordField(){
 	$('#password2').val("");
 }
 $('.basketCliaker').click(function(){window.location.href='basket';});
-/*function select(item){
-	$.cookie("currentSelect",item)
-}
-function currentSelect(){
-	var cookieValue = $.cookie("currentSelect");
-	alert(cookieValue);
-	$("#"+$.cookie("currentSelect")).attr("style","background:transparent -moz-linear-gradient(center bottom , #B95D04, #F67C06) repeat scroll 0% 0%;");
-}*/
+
+function select_columns_cab(id){
+	 Cookies.set('currentSelect', id);
+	 window.location.href="";
+};

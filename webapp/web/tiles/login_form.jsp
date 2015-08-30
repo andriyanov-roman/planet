@@ -5,7 +5,7 @@
 			<ul>
 				<li class="ButtonBlok"><div>
 						<div class="table-cell-block">
-							<form method="post" action="/planet/MyCabinet">
+							<form method="post" action="/planet/MyCabinet" onclick="Cookies.set('currentSelect', 'pers_cabinet1');">
 								<input type="submit" class="loginButton" value="${Text['MY_CABINET']}" />
 							</form>
 							<br>

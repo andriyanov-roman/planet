@@ -22,6 +22,7 @@ public class LoginFilter extends BaseFilter {
 	@Override
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 		Text.setFor(request);
+		
 		if(request.getRequestURI().toString().equals(planetUri)){
 			HttpSession session = request.getSession();
 			session.setAttribute("BodyJsp", null);
@@ -33,7 +34,6 @@ public class LoginFilter extends BaseFilter {
 				log.info("User is trying to sign in");
 				session.setAttribute("LOG_STATUS", true);
 				session.setAttribute("role", "admin");
-				session.setAttribute("tryMore", true);
 				session.setAttribute("uname", request.getParameter("name"));
 				session.setAttribute("password", request.getParameter("password"));
 				break;

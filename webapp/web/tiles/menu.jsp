@@ -7,7 +7,7 @@
 	        	<input type="hidden" name="command" value="lang" />
 	        	<input id="select_input" type="hidden" name="lang" value="" />
 	        	<input type="submit" style="display: none"/>
-	            <select onchange="select(this.options[this.selectedIndex].id)">
+	            <select onchange="select_lang(this.options[this.selectedIndex].id)">
 	             	<option id="ru">RUS</option>
 	                <option id="en">ENG</option>
 	            <!--     <option id="ua" value="img/ukr_flag_icon.png">UKR</option> -->
