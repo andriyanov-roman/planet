@@ -1,8 +1,7 @@
 $(document).ready(function() {
-
 	$(".login-popup").magnificPopup();
-	$(".reg-popup").magnificPopup();
 	$(".passrec-popup").magnificPopup();
+	$(".reg-popup").magnificPopup();
 
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -10,6 +9,9 @@ $(document).ready(function() {
 		return true;
 	}));
 	$('#'+$("html").attr("lang")).attr('selected','selected');
+	if($('#tryMore').attr("value")=="true"){
+		displaylogin();
+	}
 });
 function select(s){
 	$("#select_input").attr('value',s);
@@ -45,3 +47,12 @@ function clearInputPasswordField(){
 	$('#password').val("");
 	$('#password2').val("");
 }
+$('.basketCliaker').click(function(){window.location.href='basket';});
+/*function select(item){
+	$.cookie("currentSelect",item)
+}
+function currentSelect(){
+	var cookieValue = $.cookie("currentSelect");
+	alert(cookieValue);
+	$("#"+$.cookie("currentSelect")).attr("style","background:transparent -moz-linear-gradient(center bottom , #B95D04, #F67C06) repeat scroll 0% 0%;");
+}*/

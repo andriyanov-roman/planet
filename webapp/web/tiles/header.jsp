@@ -19,8 +19,29 @@
             <a href="../html/Registration-page.html" id="reg">Register</a>
             <input type="submit" class="log-reg-buttons" id="login-btn" value="Log In"/>
         </form>
-    </div>
+    </div><%--  --%>
     <div class="hidden-passrecovery">
+	<div id="reg-form" class="registration">
+		<div>
+			<p>Регистрация</p>
+			<hr />
+		</div>
+		<div id="reg_error"></div>
+		<form  method="post"
+			onsubmit="return check_register_form()">
+			<span>Введите Ваш email:</span><br /> <input type="email"
+				name="reg-email" required /><br /> <span>Введите Ваш пароль:</span><br />
+			<input id="password" type="password" name="password" required /><br />
+			<span>Повторите пароль:</span><br /> <input id="password2"
+				type="password" name="password" required /><br />
+			<div>
+				<input type="submit" class="log-reg-buttons" id="reg-btn"
+					value="Зарегистрироваться">
+			</div>
+		</form>
+	</div>
+  </div>
+	<div class="hidden-passrecovery">
         <form id="passrec-form" method="post" action="#">
             <span>Напомнить пароль</span>
             <input type="email" name="email" placeholder="email" required/><br>
@@ -28,18 +49,5 @@
             <input type="submit" class="log-reg-buttons" id="passrec-btn" value="Отправить"/>
         </form>
     </div>
-    --%>
-<div class="lang-switcher">
-     <img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
-        <form id="lang_form" method="post">
-        	<input type="hidden" name="command" value="lang" />
-        	<input id="select_input" type="hidden" name="lang" value="" />
-        	<input type="submit" style="display: none"/>
-            <select onchange="select(this.options[this.selectedIndex].id)">
-             	<option id="ru" value="img/ru_flag_icon.png">RUS</option>
-                <option id="en" value="img/uk_flag_icon.png">ENG</option>
-                <option id="ua" value="img/ukr_flag_icon.png">UKR</option>
-            </select>
-        </form>
-    </div>
+
 </div>

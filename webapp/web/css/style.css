@@ -3,9 +3,14 @@
 body {
 	font: 12px Arial, Verdana, Tahoma, sans-serif;
 }
+.all-content{
+	width: 100%;
+}
 								/*Header*/
 .header {	
 	height: 100px;
+	background: #E6E6E6 none repeat scroll 0% 0%;
+	border-bottom: 1px solid #BFBFBF;
 }
 
 .logo {
@@ -36,34 +41,158 @@ body {
 								/*Log In form*/
 
 .login {
-	width:320px;
+/* 	width:320px; */
+	display: table-row;
 	float: right;
-	margin: 5px 20px 0 0;
+	padding: 5px;
+	height: 90px;
+/* 	margin: 5px 20px 0 0; */
 }
-
-.field {
-	text-align: right;
-	line-height: 25px;
-	margin-bottom: 5px;
-}
-
-.customfield {
-	text-align: left;
-	line-height: 25px;
-	margin-bottom: 5px;
-}
-
-label {
-	float: left;
-	padding-right: 3px;
-}
-
 .loginform {
 	float: left;
 	margin-right: 5px;
 }
 
-.login a {
+
+
+.login li {
+	float: right;
+	margin-right: 30px;
+	height: 90px;
+}
+
+
+.loginform input {
+	height: 30px;
+}
+
+#trueloginButton{
+	display: none;
+}
+.ButtonBlok{
+	width: 150px;
+}
+
+.loginlink{
+	margin-top: 5px;
+}
+
+.loginblock{
+	width: 225px;
+	margin-right: 10px;
+}
+
+.userImg{
+	float:left;
+}
+
+input.loginButton {
+  display: inline-block;
+  font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(245,245,245);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  text-decoration: none;
+  user-select: none;
+  padding: .3em 1em;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+  box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+  -webkit-animation: pulsate 1.2s linear infinite;
+  animation: pulsate 1.2s linear infinite;
+}
+input.loginButton:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+input.loginButton:active {
+  top: 1px;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+  box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+@-webkit-keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+										/* basket */
+
+.basket{
+    width: 200px;
+    height: 58px;
+    padding: 0px 4px 0px 46px;
+    color: black;
+    text-align: left;
+    line-height: 29px;
+    margin: 0px auto;
+    box-shadow: 1px 2px 4px rgba(86, 95, 104, 0.75);
+    border-radius: 10px;
+    text-shadow: none;
+    cursor: pointer;
+	background: transparent url("/planet/img/butt.png") no-repeat scroll -1px -1px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+   
+.basket-content{
+	display: table-cell;
+	vertical-align: middle;
+	height: 58px;
+	margin-bottom: 5px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left;
+	text-shadow: none;
+	cursor: pointer;
+	color: black;
+	line-height: 29px;
+}
+.table-cell-block{
+	display: table-cell;
+	vertical-align: bottom;
+	height: 90px;
+}	
+
+.field {
+	text-align: right;
+	line-height: 30px;
+	margin-bottom: 5px;
+	width: 220px;
+}
+.field  input{
+	width: 150px;
+	padding: 0;
+}
+
+.field  label{
+	padding-top: 1.3px;
+	float: left;
+	width: 65px;
+	text-align: left;
+}
+
+.customfield {
+	text-align: left;
+	line-height: 25px;
+	padding-left: 10px;
+	margin-bottom: 5px;
+}
+.customfield input{
+	margin: 0px 10px 0px 70px;
+	height: 25px;
+	float: left;
+}
+
+
+
+#trueloginButton a {
 	text-decoration: none;
 	border-bottom: 1px dashed #0270A3;
 	color: #0270A3;
@@ -151,8 +280,13 @@ label {
 	margin: 50px auto;
 	padding: 20px 20px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	background-color: #FFF;
+	position: relative;
 }
 
+/* .mfp-bg{
+	background: none;
+} */
 .registration p {
 	font-size: 2em;
 	text-align: center;
@@ -193,13 +327,16 @@ label {
 }
 									/*Language switcher*/
 .lang-switcher {
-	height: 40px;
+	height: 50px;
 	width: 130px;
+	float: left;
+}
+#lang_form{
 	position: relative;
+	margin-top: 5px;
 }
 
 .lang-switcher #resultpic {
-	float: left;
 	width: 24px;
 	height: 24px;
 	margin-left: 5px;

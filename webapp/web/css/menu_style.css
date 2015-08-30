@@ -13,7 +13,15 @@
 #menu-list {
 	display: table-row;
 }
-
+#left-bar-list{
+/* position: absolute; */
+}
+.left-side{
+	float:left;
+	background-color: #1470BD;
+	border-radius: 0px 10px 0px 0px;
+/* 	position: absolute; */
+}
 .inner-menubox {
 	width: 1024px;
 	height: 50px;
@@ -31,6 +39,40 @@
 	border-right: 1px solid #0272a7;
 	border-left: 1px solid #0272a7;
 	font-weight: bold;
+}
+#left-bar-list a {
+	width: 171px;
+	padding-left: 55px;
+	height: 45px;
+	margin: 0px 0px 6px;
+	overflow: visible;
+	display: block;
+	position: relative;
+	z-index: 10;
+	background-color: rgba(255, 255, 255, 0.12);
+	border-radius: 0px 10px 10px 0px;
+	text-decoration: none;
+	box-shadow: 0px 0px 6px rgba(8, 72, 152, 0.75);
+	color: blue;
+	line-height: 40px;
+	font-size: 12px;
+	vertical-align: middle;
+	    background: transparent url("http://img1.elmir.ua/i/s_2WWB3f.png") no-repeat scroll -1px -61px;
+}
+#left-bar-list span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 13px;
+}
+#left-bar-list::after{
+	display: block;
+	content: "";
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-top: -23px;
 }
 
 #menu-list li:hover {

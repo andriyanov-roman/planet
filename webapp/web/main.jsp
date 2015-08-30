@@ -9,6 +9,7 @@
         <link href="${pageContext.request.contextPath}/css/magnific-popup.css" type="text/css" rel="stylesheet" />
         <link href="${pageContext.request.contextPath}/css/menu_style.css" type="text/css" rel="stylesheet" />
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//path/to/jquery.cookie.js"></script>
         <title>Planet-shop</title>
     </head>
     <body>

@@ -3,18 +3,11 @@
 <link href="${pageContext.request.contextPath}/css/pers_cabinet.css" type="text/css" rel="stylesheet" />
 <div class="content">
     <div class="left-sidebar">
-        <div class="pers_cabinet_btn">Мой кабинет</div>
-        <a href=""><div class="pers_cabinet_btn current">Личные данные</div></a>
-        <a href=""><div class="pers_cabinet_btn">Списки желаний</div></a>
-        <a href=""><div class="pers_cabinet_btn">Корзина</div></a>
-        <a href=""><div class="pers_cabinet_btn">Лист ожидания</div></a>
-        <a href=""><div class="pers_cabinet_btn">Мои заказы</div></a>
-        <a href=""><div class="pers_cabinet_btn">Мои отзывы</div></a>
-        <a href=""><div class="pers_cabinet_btn">Рассылки</div></a>
-        <a href=""><div class="pers_cabinet_btn">Участие в акциях</div></a><hr />
-        <a href=""><div class="pers_cabinet_btn double_line_btn">Редактировать личные <br />данные</div></a>
-        <a href=""><div class="pers_cabinet_btn">Изменить пароль</div></a>
-        <a href=""><div class="pers_cabinet_btn exit">Выход</div></a>
+        <a id="pers_cabinet1" onclick='select(this.id)'><div  class="pers_cabinet_btn" onclick='select(this.id)'><div class="vertical">Личные данные</div></div></a>
+        <a><div id="pers_cabinet2" class="pers_cabinet_btn" onclick='select(this.id)'><div class="vertical">Мои заказы</div></div></a>
+        <a><div id="pers_cabinet3" class="pers_cabinet_btn" onclick='select(this.id)'><div class="vertical">Редактировать личные <br />данные</div></div></a>
+        <a><div id="pers_cabinet4"class="pers_cabinet_btn" onclick='select(this.id)'><div class="vertical">Изменить пароль</div></div></a>
+        <a><div class="pers_cabinet_btn exit"><div class="vertical">Выход</div></div></a>
     </div>
     <div class="pers_data">
         <div class="title">

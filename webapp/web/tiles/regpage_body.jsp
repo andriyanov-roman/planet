@@ -11,8 +11,6 @@
         <input id="password" type="password" name="password" required/><br />
         <span>Повторите пароль:</span><br />
         <input id="password2" type="password" name="password" required/><br />
-        <input id="reg-checkbox" type="checkbox" name="reg-licenceAgree" required/>
-        <span>Я принимаю <a href="#">пользовательское соглашение.</a></span>
         <div><input type="submit" class="log-reg-buttons" id="reg-btn" value="Зарегистрироваться"></div>
     </form>
 </div>
