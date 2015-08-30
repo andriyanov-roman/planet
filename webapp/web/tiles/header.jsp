@@ -34,6 +34,9 @@
             </div>
         </ul>
     </div>
+    <div class="bucket">
+
+    </div>
     <div class="logo">
         <a href="/planet"><img src="${pageContext.request.contextPath}/img/shop-logo.png" alt="Shop-logo"></a>
     </div>

@@ -4,6 +4,7 @@ body {
 	font: 12px Arial, Verdana, Tahoma, sans-serif;
 }
 								/*Header*/
+								/*top-menu*/
 .top-menu {
 	width: 100%;
 	height: 30px;
@@ -51,6 +52,11 @@ body {
 	height: 130px;
 }
 
+								/*bucket*/
+.bucket {
+
+}
+
 .logo {
 	width: 178px;
 	height: 54px;
@@ -74,10 +80,7 @@ body {
 	right: 350px;
 	display: table-row;
 }
-
-
 								/*Log In form*/
-
 .login {
 	width: 200px;
 	float: right;
@@ -85,6 +88,7 @@ body {
 	border: 1px solid #0F84CB;
 	border-radius: 5px;
 	padding: 5px 5px;
+	background: #FAFAFA;
 }
 
 .field {

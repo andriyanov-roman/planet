@@ -72,15 +72,15 @@
 						<%--<a href="Registration">${Text['HEADER_REGISTER']}</a>--%>
 					<%--</div>--%>
 			<%--</div>--%>
-			<%--<div class="buttonBasket">--%>
-				<%--<ul>--%>
-					<%--<li>--%>
-						<%--<form method="post" action="/planet/basket">--%>
-							<%--<input type="submit" class="log-reg-buttons" value="Basket" />--%>
-						<%--</form>--%>
-					<%--</li>--%>
-				<%--</ul>--%>
-			<%--</div>--%>
+			<div class="buttonBasket">
+				<ul>
+					<li>
+						<form method="post" action="/planet/basket">
+							<input type="submit" class="log-reg-buttons" value="Basket" />
+						</form>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</c:otherwise>
 </c:choose>
