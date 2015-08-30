@@ -17,9 +17,21 @@
             </form>
         </div>
         <ul class="top-menu-list">
-            <div id="delivery-icon"><li>Home</li></div>
-            <li>Delivery</li>
-            <li>Contact us</li>
+            <div class="delivery-icon">
+                <a href="#"><li>Delivery</li></a>
+            </div>
+            <div class="payment-icon">
+                <a href="#"><li>Payment</li></a>
+            </div>
+            <div class="about_us-icon">
+                <a href="#"><li>About us</li></a>
+            </div>
+            <div class="our_stores-icon">
+                <a href="#"><li>Our stores</li></a>
+            </div>
+            <div class="contacts-icon">
+                <a href="#"><li>Contacts</li></a>
+            </div>
         </ul>
     </div>
     <div class="logo">
