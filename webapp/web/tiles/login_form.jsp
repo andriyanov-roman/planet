@@ -60,7 +60,7 @@
 						id="pass" name="password" placeholder="${Text['PLACEHOLDER_PASS']}" required />
 				</div>
 				<a href="Registration">${Text['HEADER_REGISTER']}</a>
-				<a href="#passrec-form" id="forg-pass-link">${Text['HEADER_FORGOTPASS']}</a>
+				<a href="#passrec-form" class="passrec-popup" id="forg-pass-link">${Text['HEADER_FORGOTPASS']}</a>
 				<input type="submit" class="log-reg-buttons" id="login-btn"
 					value="${Text['HEADER_BT_LOGIN']}" />
 			</form>
