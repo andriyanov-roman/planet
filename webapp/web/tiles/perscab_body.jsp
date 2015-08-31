@@ -4,10 +4,10 @@
 <link href="${pageContext.request.contextPath}/css/pers_cabinet.css" type="text/css" rel="stylesheet" />
 <div class="content">
     <div class="left-sidebar">
-        <div id="pers_cabinet1" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">Личные данные</div></div>
-        <div id="pers_cabinet2" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">Мои заказы</div></div>
-        <div id="pers_cabinet3" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">Редактировать личные <br />данные</div></div>
-        <div id="pers_cabinet4" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">Изменить пароль</div></div>
+        <div id="pers_cabinet1" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">${Text["CAB_PERSDATA"]}</div></div>
+        <div id="pers_cabinet2" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">${Text["CAB_MYORDER"]}</div></div>
+        <div id="pers_cabinet3" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">${Text["CAB_EDITDATA"]}</div></div>
+        <div id="pers_cabinet4" class="pers_cabinet_btn" onclick="select_columns_cab(this.id)"><div class="vertical">${Text["CAB_CHANGEPASS"]}</div></div>
         		<c:choose>
 					<c:when test="${sessionScope.role=='admin'}">
 						<div class="pers_cabinet_btn" onclick="window.location.href ='/planet/administration'">
@@ -29,34 +29,34 @@
 		<c:choose>
 			<c:when test="${cookie.currentSelect.value=='pers_cabinet2'}">
 				<div class="title">
-					<p>Мои заказы</p>
+					<p>${Text["CAB_MYORDER"]}</p>
 				</div>
 			</c:when>
 			<c:when test="${cookie.currentSelect.value=='pers_cabinet3'}">
 				<div class="title">
-					<p>Редактировать личные данные</p>
+					<p>${Text["CAB_EDITDATA"]}</p>
 				</div>
 			</c:when>
 			<c:when test="${cookie.currentSelect.value=='pers_cabinet4'}">
 				<div class="title">
-					<p>Изменить пароль</p>
+					<p>${Text["CAB_CHANGEPASS"]}</p>
 				</div>
 			</c:when>
 			<c:otherwise>
 			<div class="title">
-					<p>Личные данные</p>
+					<p>${Text["CAB_PERSDATA"]}</p>
 				</div>
 				<table class="table">
 					<tr>
-						<th class="left-column">Имя:</th>
+						<th class="left-column">${Text["CAB_NAME"]}</th>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
-						<td class="left-column">Фамилия:</td>
+						<td class="left-column">${Text["CAB_SECNAME"]}</td>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
-						<td class="left-column">Электронная почта:</td>
+						<td class="left-column">${Text["CAB_EMAIL"]}</td>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
@@ -64,15 +64,15 @@
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
-						<td class="left-column">Адресс доставки:</td>
+						<td class="left-column">${Text["CAB_DELADR"]}</td>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
-						<td class="left-column">Дата регистрации на сайте:</td>
+						<td class="left-column">${Text["CAB_REGDATE"]}</td>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 					<tr>
-						<td class="left-column">Персональная скидка:</td>
+						<td class="left-column">${Text["CAB_DISCOUNT"]}</td>
 						<td class="right-column">Тут будет инфа о пользователе...</td>
 					</tr>
 				</table>
