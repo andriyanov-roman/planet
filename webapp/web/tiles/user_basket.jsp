@@ -10,17 +10,17 @@
         <table class="table">
             <tr>
                 <th class="left-column"><h1>№</h1></th>
-                <th class="left-column">Название</th>
-                <th class="left-column">Описание</th>
-                <th class="left-column">Количество</th>
-                <th class="left-column">Цена</th>
+                <th class="left-column">${Text["BASKET_NAME"]}</th>
+                <th class="left-column">${Text["BASKET_DESK"]}</th>
+                <th class="left-column">${Text["BASKET_Q_TY"]}</th>
+                <th class="left-column">${Text["BASKET_PRICE"]}</th>
             </tr>
             <tr>
-            	<td class="left-column">Фамилия:</td>
-            	<td class="left-column">Фамилия:</td>
-            	<td class="left-column">Фамилия:</td>
-                <td class="left-column">Фамилия:</td>
-                <td class="left-column">Фамилия:</td>
+            	<td class="left-column">${Text["CAB_SECNAME"]}:</td>
+            	<td class="left-column">${Text["CAB_SECNAME"]}:</td>
+                <td class="left-column">${Text["CAB_SECNAME"]}:</td>
+                <td class="left-column">${Text["CAB_SECNAME"]}:</td>
+                <td class="left-column">${Text["CAB_SECNAME"]}:</td>
         </table>
         </div>
         <div Style="text-align: center;"><input type="submit" class="log-reg-buttons" id="reg-btn" value="${Text['MAKE_ORDER']}"/></div>

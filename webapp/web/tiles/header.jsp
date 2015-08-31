@@ -10,30 +10,30 @@
     <div class="hidden-passrecovery">
 	<div id="reg-form" class="registration">
 		<div>
-			<p>Регистрация</p>
+			<p>${Text['HEADER_REGISTER']}</p>
 			<hr />
 		</div>
 		<div id="reg_error"></div>
 		<form  method="post"
 			onsubmit="return check_register_form()">
-			<span>Введите Ваш email:</span><br /> <input type="email"
-				name="reg-email" required /><br /> <span>Введите Ваш пароль:</span><br />
+			<span>${Text['HEADER_ENTEREMAIL']}</span><br /> <input type="email"
+				name="reg-email" required /><br /> <span>${Text['HEADER_ENTERPASS']}</span><br />
 			<input id="password" type="password" name="password" required /><br />
-			<span>Повторите пароль:</span><br /> <input id="password2"
+			<span>${Text["HEADER_REPEATPASS"]}</span><br /> <input id="password2"
 				type="password" name="password" required /><br />
 			<div>
 				<input type="submit" class="log-reg-buttons" id="reg-btn"
-					value="Зарегистрироваться">
+					value="${Text["HEADER_REGISTER"]}">
 			</div>
 		</form>
 	</div>
   </div>
 	<div class="hidden-passrecovery">
         <form id="passrec-form" method="post" action="#">
-            <span>Напомнить пароль</span>
+            <span>${Text["HEADER_REMINDPASS"]}</span>
             <input type="email" name="email" placeholder="email" required/><br>
-            <p>Введите адрес почты, который вы указывали при регистрации, на этот адрес отправим пароль.</p>
-            <input type="submit" class="log-reg-buttons" id="passrec-btn" value="Отправить"/>
+            <p>${Text["HEADER_REGMAILTOSEND"]}</p>
+            <input type="submit" class="log-reg-buttons" id="passrec-btn" value="${Text["HEADER_SEND"]}"/>
         </form>
     </div>
 
