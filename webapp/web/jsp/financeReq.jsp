@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-  <form action="${pageContext.request.contextPath}/FinReport", method="post">
+  <form action="${pageContext.request.contextPath}/sellReport", method="post">
   Begin date: <input type="date" name="beg_date" >
   End date: <input type="date" name="end_date" >
   <input type="submit">

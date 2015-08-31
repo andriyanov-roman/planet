@@ -8,7 +8,7 @@ public class ConnectionFactory {
 
     private static ConnectionFactory instance;
     private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String DB_URL = "jdbc:mysql://planet.cdh4bmh2efrx.us-west-2.rds.amazonaws.com:3306";
+    private static String DB_URL = "jdbc:mysql://planet.cdh4bmh2efrx.us-west-2.rds.amazonaws.com:3306/planet";
     private static String USER = "planet";
     private static String PASS = "Planet@999";
 

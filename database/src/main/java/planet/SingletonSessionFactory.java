@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
  * Created by oleksii on 26.08.15.
  */
 public class SingletonSessionFactory {
-    private static SingletonSessionFactory instance;
+    private static volatile SingletonSessionFactory instance;
     private static SessionFactory sessionFactory;
 
     private SingletonSessionFactory() {
@@ -17,7 +17,9 @@ public class SingletonSessionFactory {
 
     public static SingletonSessionFactory getInstance() {
         if (instance == null) {
-            instance = new SingletonSessionFactory();
+            synchronized (SingletonSessionFactory.class){
+                if (instance == null) instance = new SingletonSessionFactory();
+            }
         }
         return instance;
     }
