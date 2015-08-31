@@ -25,7 +25,7 @@ Period from ${param.beg_date} to ${param.end_date}:
     <td>Количество</td>
     <td>Сумма</td>
   </tr>
-  <c:forEach var="fr" items="${param.fr}">
+  <c:forEach var="fr" items="${FinReportList}">
     <tr>
       <td>${fr.orderDate}</td>
       <td>${fr.login}</td>

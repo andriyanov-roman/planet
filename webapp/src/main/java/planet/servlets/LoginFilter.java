@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
-import org.junit.Test;
+//import org.junit.Test;
 
 import planet.services.Text;
 
@@ -60,7 +60,7 @@ public class LoginFilter extends BaseFilter {
 	}
 
 
-@Test
+//@Test
 public void test(){
 }
 }

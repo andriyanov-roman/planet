@@ -45,9 +45,5 @@ public class Main {
 //            SingletonSessionFactory.closeSessionFactory();
 //        }
 
-        FinReportDaoImpl dao = new FinReportDaoImpl();
-        List<FinReport> fr = dao.select();
-
-        System.out.println(fr.get(0).getAmount());
     }
 }
