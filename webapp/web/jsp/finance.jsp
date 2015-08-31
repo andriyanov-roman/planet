@@ -15,14 +15,17 @@
 <head>
     <title></title>
 </head>
-<body>
-<table>
-  <%
-      FinReportDaoImpl dao = new FinReportDaoImpl();
-      List<FinReport> fr = new ArrayList<FinReport>();
-      fr = dao.select();
-  %>
-  <c:forEach var="fr" items="${fr}">
+Period from ${param.beg_date} to ${param.end_date}:
+
+<table border="1">
+  <tr>
+    <td>Дата заказа</td>
+    <td>Логин</td>
+    <td>Продукт</td>
+    <td>Количество</td>
+    <td>Сумма</td>
+  </tr>
+  <c:forEach var="fr" items="${param.fr}">
     <tr>
       <td>${fr.orderDate}</td>
       <td>${fr.login}</td>

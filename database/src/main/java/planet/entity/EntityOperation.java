@@ -16,7 +16,7 @@ public class EntityOperation <T>{
 
         try {
             transaction = session.beginTransaction();
-            session.save(t);
+                session.save(t);
             transaction.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
