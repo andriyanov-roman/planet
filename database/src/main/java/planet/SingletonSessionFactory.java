@@ -31,6 +31,7 @@ public class SingletonSessionFactory {
         try {
             sessionFactory = configuration.buildSessionFactory(builder.build());
         }catch (Exception e) {
+            sessionFactory.close();
             System.out.print(e.getMessage());
         }
 

@@ -10,7 +10,7 @@ public class Text extends ResourceBundle {
     private static final String TEXT_ATTRIBUTE_NAME = "Text";
     private static final String TEXT_BASE_NAME = "Text";
 
-    private Text(Locale locale) {
+    public Text(Locale locale) {
         setLocale(locale);
     }
 

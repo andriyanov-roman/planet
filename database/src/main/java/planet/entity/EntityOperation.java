@@ -1,23 +1,22 @@
 package planet.entity;
 
-import org.hibernate.*;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-import planet.SingletonSessionFactory;
 
 import java.util.List;
 
 /**
- * Created by oleksii on 26.08.15.
+ * Created by oleksii on 28.08.15.
  */
-public class UserOperation implements EnityOperationI<User, String> {
-
-    @Override
-    public void add(User user, Session session) {
+public class EntityOperation <T>{
+    public void add(T t, Session session) {
         Transaction transaction = null;
 
         try {
             transaction = session.beginTransaction();
-            session.save(user);
+            session.save(t);
             transaction.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -25,13 +24,12 @@ public class UserOperation implements EnityOperationI<User, String> {
         }
     }
 
-    @Override
-    public void delete(User user, Session session) {
+    public void delete(T t, Session session) {
         Transaction transaction = null;
 
         try {
             transaction = session.beginTransaction();
-            session.delete(user);
+            session.delete(t);
             transaction.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -39,23 +37,21 @@ public class UserOperation implements EnityOperationI<User, String> {
         }
     }
 
-    @Override
-    public User get(String key, Session session) {
+    public T get(String field, String key, Session session) {
         Criteria cr = session.createCriteria(User.class);
-        cr.add(Restrictions.eq("login", key));
+        cr.add(Restrictions.eq(field, key));
         cr.setMaxResults(1);
-        List<User> users = cr.list();
+        List<T> users = cr.list();
 
         return users.get(0);
     }
 
-    @Override
-    public void update(User user, Session session) {
+    public void update(T t, Session session) {
         Transaction transaction = null;
 
         try {
             transaction = session.beginTransaction();
-            session.update(user);
+            session.update(t);
             transaction.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());

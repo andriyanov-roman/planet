@@ -7,7 +7,6 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
@@ -28,7 +27,6 @@
   height: 100%;
   left: 0;
   top: 0;
-  padding: 0 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -148,7 +146,7 @@ button::-moz-focus-inner {
   color: #FFF;
   right: -6px;
   text-align: right;
-  padding-right: 6px;
+/*   padding-right: 6px; */
   width: 100%; }
 
 .mfp-counter {

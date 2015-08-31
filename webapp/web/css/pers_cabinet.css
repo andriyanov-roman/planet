@@ -21,11 +21,11 @@
 
 .pers_cabinet_btn {
 	width: 150px;
-	height: 30px;
+	height: 40px;
 	margin: 0px 0 10px 10px;
 	border-radius: 5px;
 	text-align: center;
-	line-height: 30px;
+	cursor: pointer;
 	border: 1px solid #012739;
 	background: #014464;
 	background: -moz-linear-gradient(bottom, #0272a7, #013953);
@@ -34,6 +34,17 @@
 	-webkit-box-shadow:inset 0px 0px 1px #edf9ff;
 	box-shadow:inset 0px 0px 1px #edf9ff;
 	color: #F4F4F4;
+}
+
+.vertical{
+	vertical-align: middle;
+	display: table-cell;
+	height: 42px;
+	width: 152px;
+}
+
+.hiddenButton{
+	display: none;
 }
 
 .pers_cabinet_btn:hover {

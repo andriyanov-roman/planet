@@ -5,7 +5,7 @@
     <form method="post">
         <div class = "basket_data">
         <div class="title">
-            <p>My Basket</p>
+            <p>${Text['MY_BASKET']}</p>
         </div>
         <table class="table">
             <tr>
@@ -23,6 +23,6 @@
                 <td class="left-column">Фамилия:</td>
         </table>
         </div>
-        <div Style="text-align: center;"><input type="submit" class="log-reg-buttons" id="reg-btn" value="Оформить заказ"/></div>
+        <div Style="text-align: center;"><input type="submit" class="log-reg-buttons" id="reg-btn" value="${Text['MAKE_ORDER']}"/></div>
     </form>
 </div>
