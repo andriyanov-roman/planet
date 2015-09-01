@@ -12,10 +12,10 @@ public class SingletonSessionFactory {
     private static SessionFactory sessionFactory;
 
     private SingletonSessionFactory() {
-
+        createSessionFactory();
     }
 
-    public static SingletonSessionFactory getInstance() {
+    private static SingletonSessionFactory getInstance() {
         if (instance == null) {
             synchronized (SingletonSessionFactory.class){
                 if (instance == null) instance = new SingletonSessionFactory();
@@ -41,7 +41,10 @@ public class SingletonSessionFactory {
     }
 
     public static void closeSessionFactory() {sessionFactory.close();}
+
     public static SessionFactory getSessionFactory(){
-        return getInstance().createSessionFactory();
+        getInstance();
+
+        return SingletonSessionFactory.sessionFactory;
     }
 }
