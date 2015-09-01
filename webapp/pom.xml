@@ -52,6 +52,12 @@
             <artifactId>tiles-extras</artifactId>
             <version>3.0.5</version>
         </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -80,6 +86,9 @@
         <resources>
             <resource>
                 <directory>src/main/java/propertyfiles</directory>
+            </resource>
+            <resource>
+                <directory>C:\Users\sigen\IdeaProjects\planet\database\src\main\resources</directory>
             </resource>
         </resources>
     </build>
