@@ -31,10 +31,10 @@ import java.util.Arrays;
 	    }
 
 	    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	        Arrays.asList(MainOperation.values()).forEach(o->{if(request.getRequestURI().contains(o.toString())){
+	        Arrays.asList(MainOperation.values()).forEach(o->{
+				if(request.getRequestURI().contains(o.toString())){
 	        	operation = o;
-	        	return;
-	        }});
+			}});
 	        operation.Controller(request, response);
 //	        Container container = controller.getResponse(response,request);
 //	        request = container.getRequest();

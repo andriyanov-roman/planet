@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * Created by randriyanov on 26.08.15.
  */
 public class ChannelPool<T> {
-    private final static int POOL_SIZE = 5; // размер пула
+    private final static int POOL_SIZE = 1; // размер пула
 
     private final Semaphore semaphore = new Semaphore(POOL_SIZE, true);
 
