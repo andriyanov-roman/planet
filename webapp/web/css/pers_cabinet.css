@@ -43,9 +43,7 @@
 	width: 152px;
 }
 
-.hiddenButton{
-	display: none;
-}
+
 
 .pers_cabinet_btn:hover {
 	-webkit-transform: scale(1.1);

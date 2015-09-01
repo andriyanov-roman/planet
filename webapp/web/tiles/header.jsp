@@ -23,7 +23,7 @@
 				type="password" name="password" required /><br />
 			<div>
 				<input type="submit" class="log-reg-buttons" id="reg-btn"
-					value="${Text["HEADER_REGISTER"]}">
+					value="${Text['HEADER_REGISTER']}">
 			</div>
 		</form>
 	</div>
@@ -33,7 +33,7 @@
             <span>${Text["HEADER_REMINDPASS"]}</span>
             <input type="email" name="email" placeholder="email" required/><br>
             <p>${Text["HEADER_REGMAILTOSEND"]}</p>
-            <input type="submit" class="log-reg-buttons" id="passrec-btn" value="${Text["HEADER_SEND"]}"/>
+            <input type="submit" class="log-reg-buttons" id="passrec-btn" value="${Text['HEADER_SEND']}"/>
         </form>
     </div>
 

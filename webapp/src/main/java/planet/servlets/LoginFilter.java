@@ -25,7 +25,7 @@ public class LoginFilter extends BaseFilter {
 		
 		if(request.getRequestURI().toString().equals(planetUri)){
 			HttpSession session = request.getSession();
-			session.setAttribute("BodyJsp", null);
+			session.setAttribute("BodyJsp", "default_body.jsp");
 		}
 		if(request.getParameter("command")!=null){
 			HttpSession session = request.getSession();

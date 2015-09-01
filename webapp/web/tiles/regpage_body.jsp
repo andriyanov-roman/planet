@@ -11,6 +11,6 @@
         <input id="password" type="password" name="password" required/><br />
         <span>${Text["HEADER_REPEATPASS"]}</span><br />
         <input id="password2" type="password" name="password" required/><br />
-        <div><input type="submit" class="log-reg-buttons" id="reg-btn" value="${Text["HEADER_REGISTER"]}"></div>
+        <div><input type="submit" class="log-reg-buttons" id="reg-btn" value="${Text['HEADER_REGISTER']}"></div>
     </form>
 </div>

@@ -5,7 +5,7 @@
 			<ul>
 				<li class="ButtonBlok"><div>
 						<div class="table-cell-block">
-							<form method="post" action="/planet/MyCabinet" onclick="Cookies.set('currentSelect', 'pers_cabinet1');">
+							<form method="post" action="/planet/MyCabinet">
 								<input type="submit" class="loginButton" value="${Text['MY_CABINET']}" />
 							</form>
 							<br>
@@ -39,18 +39,6 @@
 						</div>
 					</div>
 				</li>
-				<%-- <c:choose>
-				<c:when test="${sessionScope.role=='admin'}">
-						<li><div>
-								<div class="table-cell-block">
-									<form method="post" action="/planet/administration">
-										<input type="submit" class="loginButton"
-											value="Administration" />
-									</form>
-								</div>
-							</div></li>
-					</c:when>
-				</c:choose> --%>
 			</ul>
 		</div>
 		

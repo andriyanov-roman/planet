@@ -46,7 +46,3 @@ function clearInputPasswordField(){
 }
 $('.basketCliaker').click(function(){window.location.href='basket';});
 
-function select_columns_cab(id){
-	 Cookies.set('currentSelect', id);
-	 window.location.href="";
-};

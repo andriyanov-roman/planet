@@ -19,12 +19,12 @@
             <li><a href="#" class="drop">${Text["CAT_PHONES_MP3"]}</a>
                 <div class="dropdown_1column">
                     <div class="goods-box">
-                        <a href="#"><img src="../img/smartphones.png" alt="${Text["CAT_SMARTPHONES"]}" /></a>
-                        <a href="#"><p>${Text["CAT_SMARTPHONES"]}</p></a>
+                        <a href="#"><img src="../img/smartphones.png" alt="${Text['CAT_SMARTPHONES']}" /></a>
+                        <a href="#"><span>${Text["CAT_SMARTPHONES"]}</span></a>
                     </div>
                     <div class="goods-box">
-                        <a href="#"><img src="../img/imp3.png" alt="${Text["CAT_SMARTPHONES"]}" /></a>
-                        <a href="#"><p>MP3</p></a>
+                        <a href="#"><img src="../img/imp3.png" alt="${Text['CAT_SMARTPHONES']}" /></a>
+                        <a href="#"><span>MP3</span></a>
                     </div>
                 </div>
             </li>

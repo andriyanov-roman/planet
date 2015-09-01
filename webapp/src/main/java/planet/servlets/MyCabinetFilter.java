@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns={"/MyCabinet","/MyCabinet/*"})
+@WebFilter(urlPatterns={"/MyCabinet"})
 public class MyCabinetFilter extends BaseFilter {
 	@Override
 	public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
@@ -19,7 +19,7 @@ public class MyCabinetFilter extends BaseFilter {
 			chain.doFilter(request, response);
 			return;
 		}
-		session.setAttribute("BodyJsp", null);
+		session.setAttribute("BodyJsp", "default_body.jsp");
 		response.sendRedirect("/planet");
 	}
 
