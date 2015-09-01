@@ -12,6 +12,7 @@ public class DaemonRunner {
         daemon.setDaemon(true);
         daemon.start();
         usual.start();
+
         System.out.println("последний оператор main");
     }
 }
