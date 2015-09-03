@@ -61,7 +61,7 @@ body {
 }
 
 .header {	
-	height: 140px;
+	height: 135px;
 	background: #E6E6E6 none repeat scroll 0% 0%;
 	border-bottom: 1px solid #BFBFBF;
 }
@@ -102,6 +102,10 @@ body {
 }
 
 .loginform {
+	float: left;
+	margin-right: 5px;
+}
+/* .loginform {
 	padding: 40px 20px  15px  20px;
 	background-color: #eee;
 	border: 2px solid #0f84cb;
@@ -109,18 +113,15 @@ body {
 	max-width: 225px;
 	position: relative;
 	margin: auto;
-}
+} */
 
 .login {
-/* 	width:320px; */
-	display: table-row;
 	float: right;
 	padding: 5px;
 	height: 90px;
-/* 	margin: 5px 20px 0 0; */
 }
 
-.login li {
+.headerline {
 	float: right;
 	margin-right: 30px;
 	height: 90px;

@@ -15,8 +15,8 @@ import org.apache.log4j.Logger;
 import planet.services.Text;
 
 @WebFilter("/*")
-public class LoginFilter extends BaseFilter {
-	static final Logger log = Logger.getLogger(LoginFilter.class);
+public class GlobalFilter extends BaseFilter {
+	static final Logger log = Logger.getLogger(GlobalFilter.class);
 	static final String planetUri = "/planet/";
 	
 	@Override
@@ -40,8 +40,8 @@ public class LoginFilter extends BaseFilter {
 			case "Log_Out":
 				log.info("User logout");
 				session.setAttribute("LOG_STATUS", false);
-				if(!(session.getAttribute("BodyJsp")!=null && session.getAttribute("BodyJsp").equals("user_basket.jsp"))){
-					session.setAttribute("BodyJsp", null);
+				if((session.getAttribute("BodyJsp")!=null && session.getAttribute("BodyJsp").equals("perscab_body.jsp"))){
+					session.setAttribute("BodyJsp", "default_body.jsp");
 				}
 				break;
 			case "lang":
@@ -58,9 +58,4 @@ public class LoginFilter extends BaseFilter {
 		}
 			chain.doFilter(request, response);
 	}
-
-
-//@Test
-public void test(){
-}
 }
