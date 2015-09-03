@@ -4,12 +4,20 @@ import org.hibernate.Session;
 import planet.dao.FinReportDaoImpl;
 import planet.entity.*;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
  * Created by oleksii on 09.08.15.
  */
 public class Main {
+    private SingletonSessionFactory sessionFactory;
+    private FinReportDaoImpl dao;
+
+    public void testSpring() {
+        SingletonSessionFactory.getSessionFactory().openSession();
+        dao.select(new Date(10000), new Date(10000));
+    }
 
     public static void main(String args[]) {
 

@@ -13,6 +13,7 @@
         <module>model</module>
         <module>webapp</module>
         <module>webexamples</module>
+        <module>spring-test</module>
     </modules>
     <build>
         <plugins>
