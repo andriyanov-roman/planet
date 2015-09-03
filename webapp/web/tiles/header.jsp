@@ -2,6 +2,41 @@
 <%@ page pageEncoding="UTF-8" %>
 
 <div class="header">
+	<div class="top-menu">
+		<ul class="top-menu-list">
+			<div class="delivery-icon">
+				<a href="#"><li>Delivery</li></a>
+			</div>
+			<div class="payment-icon">
+				<a href="#"><li>Payment</li></a>
+			</div>
+			<div class="about_us-icon">
+				<a href="#"><li>About us</li></a>
+			</div>
+			<div class="our_stores-icon">
+				<a href="#"><li>Our stores</li></a>
+			</div>
+			<div class="contacts-icon">
+				<a href="#"><li>Contacts</li></a>
+			</div>
+		</ul>
+		<div class="lang-switcher">
+			<form id="lang_form" method="post">
+				<img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
+				<input type="hidden" name="command" value="lang" />
+				<input id="select_input" type="hidden" name="lang" value="" />
+				<input type="submit" style="display: none"/>
+				<select onchange="select_lang(this.options[this.selectedIndex].id)">
+					<option id="ru">RUS</option>
+					<option id="en">ENG</option>
+					<!--     <option id="ua" value="img/ukr_flag_icon.png">UKR</option> -->
+				</select>
+			</form>
+		</div>
+		<div class="login_btn">
+			<a href="#loginform" class="login-popup"><input class="loginButton" id="main_login_btn" type="submit" value="Войти в кабинет" /></a>
+		</div>
+	</div>
     <div class="logo">
         <a href="/planet"><img src="${pageContext.request.contextPath}/img/shop-logo.png" alt="Shop-logo"></a>
     </div>

@@ -1,19 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page pageEncoding="UTF-8" %>
 <div class="menu">
-	<div class="lang-switcher">
-	        <form id="lang_form" method="post">
-	         <img id="resultpic" src="${Text['FLAG_LOCATION']}" alt="Выбранная картинка" />
-	        	<input type="hidden" name="command" value="lang" />
-	        	<input id="select_input" type="hidden" name="lang" value="" />
-	        	<input type="submit" style="display: none"/>
-	            <select onchange="select_lang(this.options[this.selectedIndex].id)">
-	             	<option id="ru">RUS</option>
-	                <option id="en">ENG</option>
-	            <!--     <option id="ua" value="img/ukr_flag_icon.png">UKR</option> -->
-	            </select>
-	        </form>
-	    </div>
     <div class="inner-menubox">
         <ul id="menu-list">
             <li><a href="#" class="drop">${Text["CAT_PHONES_MP3"]}</a>
