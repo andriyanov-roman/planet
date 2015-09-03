@@ -37,7 +37,7 @@
 							<input class="geenButton loginButton" form="loginform"
 								type="submit" value="${Text['HEADER_BT_LOGIN']}" />
 							<div class="loginlink">
-								<a class="reg-popup" href="#reg-form">${Text['HEADER_REGISTER']}</a>
+								<a class="passrec-popup" href="#reg-form">${Text['HEADER_REGISTER']}</a>
 							</div>
 							<div class="loginlink">
 								<a href="#passrec-form" class="passrec-popup">${Text['HEADER_FORGOTPASS']}</a>
