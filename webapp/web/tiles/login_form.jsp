@@ -1,22 +1,21 @@
+<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:choose>
-	<c:when test="${sessionScope.LOG_STATUS=='true'}">
-		<div class="login">
-			<ul>
-				<li class="ButtonBlok"><div>
+			<c:choose>
+				<c:when test="${sessionScope.LOG_STATUS=='true'}">
+				<div class="headerline ButtonBlok">
 						<div class="table-cell-block">
-							<form method="post" action="/planet/MyCabinet">
+							<form method="post" action="/planet/MyCabinet"  onsubmit="return My_Cabinet()">
 								<input type="submit" class="loginButton" value="${Text['MY_CABINET']}" />
 							</form>
 							<br>
-							<form method="post">
+							<form method="post" onsubmit="return Log_out()">
 								<input type="hidden" name="command" value="Log_Out" /> <input
 									type="submit" class="loginButton" value="${Text['LOG_OUT']}" />
 							</form>
 						</div>
-					</div></li>
-				<li class="loginblock">
-				<div class="loginform">
+					</div>
+				<div class="headerline loginblock loginform">
 						<div class="table-cell-block">
 							<div class="userImg">
 								<img src="${pageContext.request.contextPath}/img/user_icon1.png" alt="user">
@@ -31,23 +30,9 @@
 							</div>
 						</div>
 					</div>
-				</li>
-				<li>
-					<div class="table-cell-block">
-						<div class="basket">
-							<a href="/planet/basket"><span class="basket-content">${Text['BASKET_EMPTY']}</span></a>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		
-	</c:when>
-	<c:otherwise>
-		<div class="login">
-			<ul>
-				<li class="ButtonBlok">
-				<div>
+				</c:when>
+				<c:otherwise>
+				<div class="headerline ButtonBlok">
 						<div class="table-cell-block">
 							<input class="geenButton loginButton" form="loginform"
 								type="submit" value="${Text['HEADER_BT_LOGIN']}" />
@@ -59,10 +44,8 @@
 							</div>
 						</div>
 					</div>
-				</li>
-				<li class="loginblock">
-					<div>
-						<form id="loginform" method="post" class="loginform">
+					<div class="headerline loginblock">
+						<form id="loginform" method="post" class="loginform" onsubmit="return Log_in()">
 							<input type="hidden" name="command" value="Log_In" />
 							<div class="field">
 								<label for="log">${Text['HEADER_LOGIN']}</label>
@@ -78,15 +61,5 @@
 							</div>
 						</form>
 					</div>
-				</li>
-				<li>
-					<div class="table-cell-block">
-					<div class="basket basketCliaker">
-							<a href="/planet/basket"><span class="basket-content">${Text['BASKET_EMPTY']}</span></a>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</c:otherwise>
-</c:choose>
+				</c:otherwise>
+			</c:choose>

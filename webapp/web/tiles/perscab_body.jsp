@@ -19,7 +19,7 @@
 					</c:when>
 				</c:choose>
         <div class="pers_cabinet_btn exit" onclick="$('#Log_out_form_cab').submit()">
-       					 <form id="Log_out_form_cab" method="post" class="hiddenblock"><input type="hidden" name="command" value="Log_Out"/>
+       					 <form id="Log_out_form_cab" method="post" onsubmit="return Log_out()" class="hiddenblock"><input type="hidden" name="command" value="Log_Out"/>
        					 <input type="submit"/>
        					 </form>      
        	 	<div class="vertical">${Text['LOG_OUT']}</div>

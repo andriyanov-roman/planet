@@ -5,7 +5,18 @@
     <div class="logo">
         <a href="/planet"><img src="${pageContext.request.contextPath}/img/shop-logo.png" alt="Shop-logo"></a>
     </div>
-    <jsp:include page="login_form.jsp" />
+    <div class="login">
+    	<div class="headerline loginPostBlock">
+    		<jsp:include page="login_form.jsp" />
+    	</div>
+    	<div class="headerline">
+						<div class="table-cell-block">
+							<div class="basket basketCliaker">
+								<a href="/planet/basket"><span class="basket-content">${Text['BASKET_EMPTY']}</span></a>
+							</div>
+						</div>
+					</div>
+    </div>
     <div style="clear: both"></div>
     <div class="hidden-passrecovery">
 	<div id="reg-form" class="registration">
