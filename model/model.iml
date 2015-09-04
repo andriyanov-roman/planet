@@ -36,5 +36,9 @@
     <orderEntry type="library" name="Maven: javax.el:javax.el-api:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="jasperreports-6.1.0" level="project" />
+    <orderEntry type="library" name="jasperreports-fonts-6.1.0" level="project" />
+    <orderEntry type="library" name="jasperreports-functions-6.1.0" level="project" />
+    <orderEntry type="library" name="jasperreports-javaflow-6.1.0" level="project" />
   </component>
 </module>
