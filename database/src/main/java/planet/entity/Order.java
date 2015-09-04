@@ -13,10 +13,10 @@ public class Order{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName="id", nullable = false)
     private User user;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName="id", nullable = false)
     private Product product;
     @Column(name = "product_qty", nullable = false)

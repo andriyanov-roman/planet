@@ -9,22 +9,9 @@ import org.hibernate.cfg.Configuration;
  */
 public class SingletonSessionFactory {
     private static volatile SingletonSessionFactory instance;
-    private static SessionFactory sessionFactory;
+    public static SessionFactory sessionFactory;
 
     private SingletonSessionFactory() {
-        createSessionFactory();
-    }
-
-    private static SingletonSessionFactory getInstance() {
-        if (instance == null) {
-            synchronized (SingletonSessionFactory.class){
-                if (instance == null) instance = new SingletonSessionFactory();
-            }
-        }
-        return instance;
-    }
-
-    private  SessionFactory createSessionFactory(){
         Configuration configuration = new Configuration().configure();
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties());
@@ -33,18 +20,25 @@ public class SingletonSessionFactory {
         try {
             sessionFactory = configuration.buildSessionFactory(builder.build());
         }catch (Exception e) {
-            sessionFactory.close();
+            System.out.print("Ошибка загрузки конфигурации");
             System.out.print(e.getMessage());
-        }
 
-        return sessionFactory;
+            sessionFactory.close();
+        }
+    }
+
+    public static SingletonSessionFactory getInstance() {
+        SingletonSessionFactory localInstance = instance;
+        if (localInstance == null) {
+            synchronized (SingletonSessionFactory.class) {
+                localInstance = instance;
+                if (localInstance == null) {
+                    instance = localInstance = new SingletonSessionFactory();
+                }
+            }
+        }
+        return localInstance;
     }
 
     public static void closeSessionFactory() {sessionFactory.close();}
-
-    public static SessionFactory getSessionFactory(){
-        getInstance();
-
-        return SingletonSessionFactory.sessionFactory;
-    }
 }

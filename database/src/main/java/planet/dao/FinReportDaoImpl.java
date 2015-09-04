@@ -16,16 +16,17 @@ import java.util.List;
  * Created by oleksii on 20.08.15.
  */
 public class FinReportDaoImpl {
-    public List<FinReport> select(Date begDate, Date endDate){
-        List <FinReport> reports = new ArrayList<FinReport>();
+    public ArrayList<FinReport> select(){
+
+        ArrayList <FinReport> reports = new ArrayList<FinReport>();
         try (Connection connection = ConnectionFactory.getConnection();
         ) {
             try {
                 String sqlGood =
-                        "Select o.order_date, u.login, p.name, o.product_qty, o.amount from orders o, product p, user u where o.product_id = p.id and o.user_id = u.id and DATE(o.order_date) between ? and ?";
+                        "Select o.order_date, u.login, p.name, o.product_qty, o.amount from orders o, product p, user u where o.product_id = p.id and o.user_id = u.id";
                 PreparedStatement statement = connection.prepareStatement(sqlGood);
-                statement.setDate(1, begDate);
-                statement.setDate(2, endDate);
+//                statement.setDate(1, begDate);
+//                statement.setDate(2, endDate);
 
 
                 statement.toString();

@@ -15,8 +15,8 @@
 <head>
     <title></title>
 </head>
-Period from ${param.beg_date} to ${param.end_date}:
-
+Period from: ${param.beg_date} to ${param.end_date}<br>
+Sync date: ${SyncDate}<br>
 <table border="1">
   <tr>
     <td>Дата заказа</td>

@@ -1,5 +1,6 @@
 package planet.servlets;
 
+import planet.SngltFinReport;
 import planet.dao.FinReportDaoImpl;
 import planet.entity.FinReport;
 
@@ -14,6 +15,7 @@ import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -35,13 +37,16 @@ public class SellReport extends HttpServlet {
         try {
             Date begDate = format.parse(request.getParameter("beg_date"));
             Date endDate = format.parse(request.getParameter("end_date"));
-            FinReportDaoImpl dao = new FinReportDaoImpl();
-
 
             java.sql.Date sqlBegDate = new java.sql.Date(begDate.getTime());
             java.sql.Date sqlEndDate = new java.sql.Date(endDate.getTime());
-            List<FinReport> fr = dao.select(sqlBegDate, sqlEndDate);
 
+            ArrayList<FinReport> fr = SngltFinReport.getFinRep();
+
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date syncDate = SngltFinReport.getSyncDate();
+
+            request.setAttribute("SyncDate", dateFormat.format(syncDate));
             request.setAttribute("FinReportList", fr);
 
             PrintWriter pw = response.getWriter();

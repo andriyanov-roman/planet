@@ -11,7 +11,7 @@ public class Product{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName="id", nullable = false)
     private ProductCategory category;
     @Column(nullable = false)

@@ -14,12 +14,10 @@ public class UserRole{
     private long id;
     @Column(unique = true, nullable = false)
     private String code;
-    @Column(unique = true, nullable =  false)
-    private String name;
 
-    public UserRole(String code, String name) {
+    public UserRole(long id, String code) {
+            this.id = id;
             this.code = code;
-            this.name = name;
     }
 
     public UserRole(){}
@@ -30,13 +28,6 @@ public class UserRole{
 
     public void setCode(String code) {
         this.code = code;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public long getId() {
