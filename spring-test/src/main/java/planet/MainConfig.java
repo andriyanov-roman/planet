@@ -9,8 +9,8 @@ import planet.annonbeans.SecondInterfaceImpl;
 import planet.annonbeans.TestIntefaceImpl;
 
 @Configuration
-@ComponentScan
-@ImportResource("classpath:beans.xml")
+@ComponentScan(basePackageClasses = {DataBaseConfig.class})
+@ImportResource({"classpath:beans.xml","classpath:second_beans.xml"})
 public class MainConfig {
 
 

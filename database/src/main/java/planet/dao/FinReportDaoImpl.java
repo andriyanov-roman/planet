@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by oleksii on 20.08.15.
  */
-public class FinReportDaoImpl {
+public class FinReportDaoImpl implements IFinReport{
     public ArrayList<FinReport> select(){
 
         ArrayList <FinReport> reports = new ArrayList<FinReport>();
@@ -50,5 +50,10 @@ public class FinReportDaoImpl {
             e.printStackTrace();
         }
         return reports;
+    }
+
+    @Override
+    public void doSomething() {
+        System.out.println("Hello Gena Slipakov!!!!");
     }
 }

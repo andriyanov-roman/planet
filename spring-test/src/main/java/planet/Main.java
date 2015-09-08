@@ -5,6 +5,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import planet.annonbeans.ITestInterface;
 import planet.annonbeans.SeconTest;
+import planet.dao.FinReportDaoImpl;
+import planet.dao.IFinReport;
+import planet.entity.FinReport;
 import planet.xmlbeans.HelloWorld;
 
 /**
@@ -24,7 +27,7 @@ public class Main {
         ctx.register(MainConfig.class);
         ctx.refresh();
         SeconTest myBean = ctx.getBean(SeconTest.class);
-        HelloWorld helloWorld = (HelloWorld) ctx.getBean("helloWorld");
+        HelloWorld helloWorld = (HelloWorld) ctx.getBean("helloWorldTwo");
         //helloWorld.setMessage("hello");
         System.out.println(helloWorld.getMessage());
         myBean.doSomething();
